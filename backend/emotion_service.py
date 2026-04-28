@@ -2,7 +2,15 @@ from collections import deque, Counter
 from typing import Optional
 import numpy as np
 import cv2
-from deepface import DeepFace
+
+# Lazy import — DeepFace is large; backend starts without it,
+# emotion recognition silently returns None until it's installed.
+try:
+    from deepface import DeepFace
+    _DEEPFACE_AVAILABLE = True
+except Exception:          # catches ImportError, MemoryError, and any other init error
+    DeepFace = None  # type: ignore
+    _DEEPFACE_AVAILABLE = False
 
 EMOTION_MAP = {
     "happy": "happy", "sad": "sad", "angry": "angry",
@@ -15,6 +23,8 @@ class EmotionService:
         self._buffer: deque = deque(maxlen=window)
 
     def analyze_frame(self, jpeg_bytes: bytes) -> Optional[dict]:
+        if not _DEEPFACE_AVAILABLE:
+            return None
         try:
             arr = np.frombuffer(jpeg_bytes, np.uint8)
             img = cv2.imdecode(arr, cv2.IMREAD_COLOR)
