@@ -14,14 +14,17 @@ _session_state: dict = {}
 
 @router.post("/start", response_model=SessionStartResponse)
 def start_session(req: SessionStartRequest, db: DBSession = Depends(get_db)):
-    session = data_service.create_session(db, req.child_id, req.activity_type)
+    # Verify child exists BEFORE creating the session
     child = db.query(models.Child).filter_by(id=req.child_id).first()
     if not child:
         raise HTTPException(404, "Child not found")
+
+    session = data_service.create_session(db, req.child_id, req.activity_type)
     bkt_states = {s.emotion: s.p_known for s in data_service.get_bkt_states(db, req.child_id)}
     diff = child.current_difficulty_level
     if req.activity_type == "diary":
-        _session_state[session.id] = {"child_id": req.child_id, "difficulty": diff,
+        _session_state[session.id] = {"child_id": req.child_id, "activity_type": req.activity_type,
+                                       "difficulty": diff,
                                        "recent_answers": [], "seen_ids": set(), "bkt": bkt_states}
         return SessionStartResponse(session_id=session.id, first_question=None, difficulty=None)
     weakest = min(bkt_states, key=lambda e: bkt_states[e])

@@ -20,7 +20,7 @@ async def emotion_stream(websocket: WebSocket, session_id: str):
             face_result = service.process(jpeg_bytes)
             fused = fuse_emotions(face=face_result, voice=None, heart=None)
             payload = fused.copy() if fused else {"emotion": None, "confidence": 0.0}
-            payload["source"] = "fused" if fused else "face"
+            payload["source"] = "fused" if fused else "none"
             if fused and session_id in _session_state:
                 _session_state[session_id]["fused_emotion"] = fused["emotion"]
                 _session_state[session_id]["fused_confidence"] = fused["confidence"]

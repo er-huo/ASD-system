@@ -4,7 +4,7 @@ from config import (
 )
 
 def update_bkt(p_known: float, is_correct: bool, difficulty: int) -> float:
-    p_g = BKT_GUESS_RATE[difficulty]
+    p_g = BKT_GUESS_RATE.get(difficulty, BKT_GUESS_RATE[2])
     p_s = BKT_SLIP_RATE
     p_t = BKT_LEARNING_RATE
     if is_correct:
@@ -24,7 +24,7 @@ def decide_adaptive_action(
     from config import CONFUSION_CONFIDENCE_THRESHOLD
     if fused_emotion in ("angry", "fear") and fused_confidence > ANXIETY_CONFIDENCE_THRESHOLD:
         return "reduce"
-    if fused_emotion == "confused" and fused_confidence > CONFUSION_CONFIDENCE_THRESHOLD[difficulty]:
+    if fused_emotion == "confused" and fused_confidence > CONFUSION_CONFIDENCE_THRESHOLD.get(difficulty, CONFUSION_CONFIDENCE_THRESHOLD[2]):
         return "hint"
     if len(recent_answers) < 3:
         return "none"

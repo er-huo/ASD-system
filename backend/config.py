@@ -1,4 +1,5 @@
-THERAPIST_PASSWORD = "admin1234"
+import os
+THERAPIST_PASSWORD = os.getenv("THERAPIST_PASSWORD", "admin1234")
 QUESTIONS_PER_SESSION = 10
 DB_URL = "sqlite:///./database.db"
 TEST_DB_URL = "sqlite:///:memory:"

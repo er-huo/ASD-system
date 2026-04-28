@@ -7,6 +7,13 @@ from main import app
 
 TEST_DB_URL = "sqlite:///:memory:"
 
+@pytest.fixture(autouse=True)
+def clear_session_state():
+    from routers import sessions
+    sessions._session_state.clear()
+    yield
+    sessions._session_state.clear()
+
 @pytest.fixture(scope="function")
 def db_engine():
     engine = create_engine(TEST_DB_URL, connect_args={"check_same_thread": False})
