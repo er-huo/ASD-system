@@ -11,7 +11,9 @@ final backendUrlProvider = FutureProvider<String>((ref) async {
 final apiServiceProvider = Provider<ApiService>((ref) {
   final asyncUrl = ref.watch(backendUrlProvider);
   final url = asyncUrl.valueOrNull ?? 'http://192.168.1.100:8000';
-  return ApiService(baseUrl: url);
+  final svc = ApiService(baseUrl: url);
+  ref.onDispose(svc.close);
+  return svc;
 });
 
 final webSocketServiceProvider = Provider<WebSocketService>((ref) {

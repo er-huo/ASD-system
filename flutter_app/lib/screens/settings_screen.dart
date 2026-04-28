@@ -18,6 +18,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
   Future<void> _loadPrefs() async {
     final prefs = await SharedPreferences.getInstance();
+    if (!mounted) return;
     setState(() {
       _musicEnabled = prefs.getBool('music_enabled') ?? true;
       _volume = prefs.getDouble('volume') ?? 0.8;

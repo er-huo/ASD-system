@@ -29,6 +29,7 @@ class _TrainingScreenState extends ConsumerState<TrainingScreen> {
   bool _hintShown = false;
   bool _showHint = false;
   bool _loading = true;
+  bool _submitting = false;
   String? _error;
   String _tinoEmotion = 'happy';
   late DateTime _questionStartTime;
@@ -47,6 +48,7 @@ class _TrainingScreenState extends ConsumerState<TrainingScreen> {
     try {
       final api = ref.read(apiServiceProvider);
       final start = await api.startSession(childId: widget.childId, activityType: widget.activityType);
+      if (!mounted) return;
       setState(() {
         _sessionId = start.sessionId;
         _currentQuestion = start.firstQuestion;
@@ -56,6 +58,7 @@ class _TrainingScreenState extends ConsumerState<TrainingScreen> {
       });
       _startTimeoutTimer();
     } catch (e) {
+      if (!mounted) return;
       setState(() { _error = e.toString(); _loading = false; });
     }
   }
@@ -76,6 +79,8 @@ class _TrainingScreenState extends ConsumerState<TrainingScreen> {
   }
 
   Future<void> _submitAnswer(String choice, {bool timedOut = false}) async {
+    if (_submitting) return;  // double-tap guard
+    _submitting = true;
     _timeoutTimer?.cancel();
     final q = _currentQuestion!;
     final responseMs = DateTime.now().difference(_questionStartTime).inMilliseconds;
@@ -85,12 +90,14 @@ class _TrainingScreenState extends ConsumerState<TrainingScreen> {
       final result = await api.submitAnswer(
         sessionId: _sessionId!, emotionTarget: q.emotionTarget,
         userResponse: choice, responseMs: responseMs, hintShown: _hintShown);
+      if (!mounted) { _submitting = false; return; }
       final audioPath = result.isCorrect ? kEmotionAudio[q.emotionTarget] : null;
       if (audioPath != null) {
         try { await _player.setAsset(audioPath); await _player.play(); } catch (_) {}
       }
       if (result.adaptiveAction == 'hint' && !_showHint) {
         setState(() { _showHint = true; _hintShown = true; });
+        _submitting = false;
         return;
       }
       setState(() {
@@ -98,8 +105,10 @@ class _TrainingScreenState extends ConsumerState<TrainingScreen> {
         _difficulty = result.difficulty;
       });
       await Future.delayed(const Duration(milliseconds: 1200));
+      if (!mounted) { _submitting = false; return; }
       _questionIndex++;
       if (_questionIndex >= kQuestionsPerSession || result.nextQuestion == null) {
+        _submitting = false;
         await _endSession();
       } else {
         setState(() {
@@ -107,9 +116,14 @@ class _TrainingScreenState extends ConsumerState<TrainingScreen> {
           _selectedChoice = null; _hintShown = false; _showHint = false;
           _tinoEmotion = 'happy'; _questionStartTime = DateTime.now();
         });
+        _submitting = false;
         _startTimeoutTimer();
       }
-    } catch (e) { setState(() { _error = e.toString(); }); }
+    } catch (e) {
+      if (!mounted) { _submitting = false; return; }
+      setState(() { _error = e.toString(); });
+      _submitting = false;
+    }
   }
 
   Future<void> _endSession() async {
@@ -135,7 +149,10 @@ class _TrainingScreenState extends ConsumerState<TrainingScreen> {
       ),
       body: Column(children: [
         if (_showHint && q != null)
-          HintCard(emotionTarget: q.emotionTarget, onDismiss: () => setState(() => _showHint = false)),
+          HintCard(emotionTarget: q.emotionTarget, onDismiss: () => setState(() {
+              _showHint = false;
+              _questionStartTime = DateTime.now(); // reset timer after hint dismissed
+            })),
         Expanded(child: Row(children: [
           Expanded(flex: 6, child: Padding(
             padding: const EdgeInsets.all(24),

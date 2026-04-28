@@ -74,4 +74,6 @@ class ApiService {
     if (resp.statusCode != 200) throw Exception('getReport failed');
     return jsonDecode(resp.body) as Map<String, dynamic>;
   }
+
+  void close() => httpClient.close();
 }

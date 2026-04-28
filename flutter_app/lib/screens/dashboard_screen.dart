@@ -23,8 +23,12 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
     try {
       final api = ref.read(apiServiceProvider);
       final report = await api.getReport(widget.childId);
+      if (!mounted) return;
       setState(() { _report = report; _loading = false; });
-    } catch (e) { setState(() { _loading = false; }); }
+    } catch (e) {
+      if (!mounted) return;
+      setState(() { _loading = false; });
+    }
   }
 
   @override
@@ -86,10 +90,10 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
         Padding(padding: EdgeInsets.all(8), child: Text('状态', style: TextStyle(fontWeight: FontWeight.bold))),
       ]),
       ...states.map((s) {
-        final p = (s['p_known'] as num).toDouble();
+        final p = (s['p_known'] as num?)?.toDouble() ?? 0.0;
         final mastered = p >= 0.95;
         return TableRow(children: [
-          Padding(padding: const EdgeInsets.all(8), child: Text(s['emotion'] as String)),
+          Padding(padding: const EdgeInsets.all(8), child: Text(s['emotion'] as String? ?? '')),
           Padding(padding: const EdgeInsets.all(8), child: Text('${(p * 100).toStringAsFixed(1)}%')),
           Padding(padding: const EdgeInsets.all(8), child: Text(mastered ? '✅ 已掌握' : '📖 学习中',
               style: TextStyle(color: mastered ? Colors.green : Colors.orange))),

@@ -37,14 +37,14 @@ class _StarTalkRouterState extends State<_StarTalkRouter> {
     routes: [
       GoRoute(path: '/config',    builder: (_, __) => const IpConfigScreen()),
       GoRoute(path: '/splash',    builder: (_, __) => const SplashScreen()),
-      GoRoute(path: '/home',      builder: (_, s) => HomeScreen(childId: s.uri.queryParameters['child_id']!)),
-      GoRoute(path: '/train',     builder: (_, s) => TrainingScreen(childId: s.uri.queryParameters['child_id']!, activityType: s.uri.queryParameters['activity']!)),
+      GoRoute(path: '/home',      builder: (_, s) => HomeScreen(childId: s.uri.queryParameters['child_id'] ?? '')),
+      GoRoute(path: '/train',     builder: (_, s) => TrainingScreen(childId: s.uri.queryParameters['child_id'] ?? '', activityType: s.uri.queryParameters['activity'] ?? 'detective')),
       GoRoute(path: '/summary',   builder: (_, s) => SummaryScreen(
-        sessionId: s.uri.queryParameters['session_id']!,
+        sessionId: s.uri.queryParameters['session_id'] ?? '',
         accuracy: int.tryParse(s.uri.queryParameters['accuracy'] ?? '0') ?? 0,
         total: int.tryParse(s.uri.queryParameters['total'] ?? '0') ?? 0,
       )),
-      GoRoute(path: '/dashboard', builder: (_, s) => DashboardScreen(childId: s.uri.queryParameters['child_id']!)),
+      GoRoute(path: '/dashboard', builder: (_, s) => DashboardScreen(childId: s.uri.queryParameters['child_id'] ?? '')),
       GoRoute(path: '/settings',  builder: (_, __) => const SettingsScreen()),
     ],
   );

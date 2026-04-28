@@ -12,10 +12,12 @@ class WebSocketService {
   bool get isConnected => _channel != null;
 
   void connect(String wsUrl) {
+    if (_channel != null) return; // already connected
     _channel = WebSocketChannel.connect(Uri.parse(wsUrl));
     _channel!.stream.listen(
       (data) {
-        final json = jsonDecode(data as String) as Map<String, dynamic>;
+        if (data is! String) return; // ignore binary frames
+        final json = jsonDecode(data) as Map<String, dynamic>;
         _controller.add(EmotionFrame.fromJson(json));
       },
       onError: (_) => disconnect(),
