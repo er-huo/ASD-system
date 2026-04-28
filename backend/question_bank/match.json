@@ -1,0 +1,947 @@
+[
+  {
+    "id": "match_happy_l1_001",
+    "activity_type": "match",
+    "emotion_target": "happy",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/happy_01.jpg",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "happy",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_happy_l1_002",
+    "activity_type": "match",
+    "emotion_target": "happy",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/happy_02.jpg",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "happy",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_happy_l1_003",
+    "activity_type": "match",
+    "emotion_target": "happy",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/happy_03.jpg",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "happy",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_happy_l2_001",
+    "activity_type": "match",
+    "emotion_target": "happy",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/happy_01.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "angry"
+    ],
+    "correct_answer": "happy",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_happy_l2_002",
+    "activity_type": "match",
+    "emotion_target": "happy",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/happy_02.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "angry"
+    ],
+    "correct_answer": "happy",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_happy_l2_003",
+    "activity_type": "match",
+    "emotion_target": "happy",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/happy_03.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "angry"
+    ],
+    "correct_answer": "happy",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_happy_l3_001",
+    "activity_type": "match",
+    "emotion_target": "happy",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/happy_01.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "happy",
+    "n_pairs": 3
+  },
+  {
+    "id": "match_happy_l3_002",
+    "activity_type": "match",
+    "emotion_target": "happy",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/happy_02.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "happy",
+    "n_pairs": 3
+  },
+  {
+    "id": "match_happy_l3_003",
+    "activity_type": "match",
+    "emotion_target": "happy",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/happy_03.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "happy",
+    "n_pairs": 3
+  },
+  {
+    "id": "match_sad_l1_001",
+    "activity_type": "match",
+    "emotion_target": "sad",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/sad_01.jpg",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "sad",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_sad_l1_002",
+    "activity_type": "match",
+    "emotion_target": "sad",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/sad_02.jpg",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "sad",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_sad_l1_003",
+    "activity_type": "match",
+    "emotion_target": "sad",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/sad_03.jpg",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "sad",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_sad_l2_001",
+    "activity_type": "match",
+    "emotion_target": "sad",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/sad_01.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "sad",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_sad_l2_002",
+    "activity_type": "match",
+    "emotion_target": "sad",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/sad_02.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "sad",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_sad_l2_003",
+    "activity_type": "match",
+    "emotion_target": "sad",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/sad_03.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "sad",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_sad_l3_001",
+    "activity_type": "match",
+    "emotion_target": "sad",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/sad_01.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "sad",
+    "n_pairs": 3
+  },
+  {
+    "id": "match_sad_l3_002",
+    "activity_type": "match",
+    "emotion_target": "sad",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/sad_02.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "sad",
+    "n_pairs": 3
+  },
+  {
+    "id": "match_sad_l3_003",
+    "activity_type": "match",
+    "emotion_target": "sad",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/sad_03.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "sad",
+    "n_pairs": 3
+  },
+  {
+    "id": "match_angry_l1_001",
+    "activity_type": "match",
+    "emotion_target": "angry",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/angry_01.jpg",
+    "choices": [
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_angry_l1_002",
+    "activity_type": "match",
+    "emotion_target": "angry",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/angry_02.jpg",
+    "choices": [
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_angry_l1_003",
+    "activity_type": "match",
+    "emotion_target": "angry",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/angry_03.jpg",
+    "choices": [
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_angry_l2_001",
+    "activity_type": "match",
+    "emotion_target": "angry",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/angry_01.jpg",
+    "choices": [
+      "angry",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_angry_l2_002",
+    "activity_type": "match",
+    "emotion_target": "angry",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/angry_02.jpg",
+    "choices": [
+      "angry",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_angry_l2_003",
+    "activity_type": "match",
+    "emotion_target": "angry",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/angry_03.jpg",
+    "choices": [
+      "angry",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_angry_l3_001",
+    "activity_type": "match",
+    "emotion_target": "angry",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/angry_01.jpg",
+    "choices": [
+      "angry",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "n_pairs": 3
+  },
+  {
+    "id": "match_angry_l3_002",
+    "activity_type": "match",
+    "emotion_target": "angry",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/angry_02.jpg",
+    "choices": [
+      "angry",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "n_pairs": 3
+  },
+  {
+    "id": "match_angry_l3_003",
+    "activity_type": "match",
+    "emotion_target": "angry",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/angry_03.jpg",
+    "choices": [
+      "angry",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "n_pairs": 3
+  },
+  {
+    "id": "match_fear_l1_001",
+    "activity_type": "match",
+    "emotion_target": "fear",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/fear_01.jpg",
+    "choices": [
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_fear_l1_002",
+    "activity_type": "match",
+    "emotion_target": "fear",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/fear_02.jpg",
+    "choices": [
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_fear_l1_003",
+    "activity_type": "match",
+    "emotion_target": "fear",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/fear_03.jpg",
+    "choices": [
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_fear_l2_001",
+    "activity_type": "match",
+    "emotion_target": "fear",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/fear_01.jpg",
+    "choices": [
+      "fear",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_fear_l2_002",
+    "activity_type": "match",
+    "emotion_target": "fear",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/fear_02.jpg",
+    "choices": [
+      "fear",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_fear_l2_003",
+    "activity_type": "match",
+    "emotion_target": "fear",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/fear_03.jpg",
+    "choices": [
+      "fear",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_fear_l3_001",
+    "activity_type": "match",
+    "emotion_target": "fear",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/fear_01.jpg",
+    "choices": [
+      "fear",
+      "angry",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "n_pairs": 3
+  },
+  {
+    "id": "match_fear_l3_002",
+    "activity_type": "match",
+    "emotion_target": "fear",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/fear_02.jpg",
+    "choices": [
+      "fear",
+      "angry",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "n_pairs": 3
+  },
+  {
+    "id": "match_fear_l3_003",
+    "activity_type": "match",
+    "emotion_target": "fear",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/fear_03.jpg",
+    "choices": [
+      "fear",
+      "angry",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "n_pairs": 3
+  },
+  {
+    "id": "match_surprise_l1_001",
+    "activity_type": "match",
+    "emotion_target": "surprise",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/surprise_01.jpg",
+    "choices": [
+      "happy",
+      "surprise"
+    ],
+    "correct_answer": "surprise",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_surprise_l1_002",
+    "activity_type": "match",
+    "emotion_target": "surprise",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/surprise_02.jpg",
+    "choices": [
+      "happy",
+      "surprise"
+    ],
+    "correct_answer": "surprise",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_surprise_l1_003",
+    "activity_type": "match",
+    "emotion_target": "surprise",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/surprise_03.jpg",
+    "choices": [
+      "happy",
+      "surprise"
+    ],
+    "correct_answer": "surprise",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_surprise_l2_001",
+    "activity_type": "match",
+    "emotion_target": "surprise",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/surprise_01.jpg",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "surprise",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_surprise_l2_002",
+    "activity_type": "match",
+    "emotion_target": "surprise",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/surprise_02.jpg",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "surprise",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_surprise_l2_003",
+    "activity_type": "match",
+    "emotion_target": "surprise",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/surprise_03.jpg",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "surprise",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_surprise_l3_001",
+    "activity_type": "match",
+    "emotion_target": "surprise",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/surprise_01.jpg",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "surprise",
+    "n_pairs": 3
+  },
+  {
+    "id": "match_surprise_l3_002",
+    "activity_type": "match",
+    "emotion_target": "surprise",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/surprise_02.jpg",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "surprise",
+    "n_pairs": 3
+  },
+  {
+    "id": "match_surprise_l3_003",
+    "activity_type": "match",
+    "emotion_target": "surprise",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/surprise_03.jpg",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "surprise",
+    "n_pairs": 3
+  },
+  {
+    "id": "match_neutral_l1_001",
+    "activity_type": "match",
+    "emotion_target": "neutral",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/neutral_01.jpg",
+    "choices": [
+      "happy",
+      "neutral"
+    ],
+    "correct_answer": "neutral",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_neutral_l1_002",
+    "activity_type": "match",
+    "emotion_target": "neutral",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/neutral_02.jpg",
+    "choices": [
+      "happy",
+      "neutral"
+    ],
+    "correct_answer": "neutral",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_neutral_l1_003",
+    "activity_type": "match",
+    "emotion_target": "neutral",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/neutral_03.jpg",
+    "choices": [
+      "happy",
+      "neutral"
+    ],
+    "correct_answer": "neutral",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_neutral_l2_001",
+    "activity_type": "match",
+    "emotion_target": "neutral",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/neutral_01.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "neutral",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_neutral_l2_002",
+    "activity_type": "match",
+    "emotion_target": "neutral",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/neutral_02.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "neutral",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_neutral_l2_003",
+    "activity_type": "match",
+    "emotion_target": "neutral",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/neutral_03.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "neutral",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_neutral_l3_001",
+    "activity_type": "match",
+    "emotion_target": "neutral",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/neutral_01.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "neutral",
+    "n_pairs": 3
+  },
+  {
+    "id": "match_neutral_l3_002",
+    "activity_type": "match",
+    "emotion_target": "neutral",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/neutral_02.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "neutral",
+    "n_pairs": 3
+  },
+  {
+    "id": "match_neutral_l3_003",
+    "activity_type": "match",
+    "emotion_target": "neutral",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/neutral_03.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "neutral",
+    "n_pairs": 3
+  },
+  {
+    "id": "match_confused_l1_001",
+    "activity_type": "match",
+    "emotion_target": "confused",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/confused_01.jpg",
+    "choices": [
+      "confused",
+      "neutral"
+    ],
+    "correct_answer": "confused",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_confused_l1_002",
+    "activity_type": "match",
+    "emotion_target": "confused",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/confused_02.jpg",
+    "choices": [
+      "confused",
+      "neutral"
+    ],
+    "correct_answer": "confused",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_confused_l1_003",
+    "activity_type": "match",
+    "emotion_target": "confused",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/confused_03.jpg",
+    "choices": [
+      "confused",
+      "neutral"
+    ],
+    "correct_answer": "confused",
+    "n_pairs": 1
+  },
+  {
+    "id": "match_confused_l2_001",
+    "activity_type": "match",
+    "emotion_target": "confused",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/confused_01.jpg",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad"
+    ],
+    "correct_answer": "confused",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_confused_l2_002",
+    "activity_type": "match",
+    "emotion_target": "confused",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/confused_02.jpg",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad"
+    ],
+    "correct_answer": "confused",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_confused_l2_003",
+    "activity_type": "match",
+    "emotion_target": "confused",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/confused_03.jpg",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad"
+    ],
+    "correct_answer": "confused",
+    "n_pairs": 2
+  },
+  {
+    "id": "match_confused_l3_001",
+    "activity_type": "match",
+    "emotion_target": "confused",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/confused_01.jpg",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "confused",
+    "n_pairs": 3
+  },
+  {
+    "id": "match_confused_l3_002",
+    "activity_type": "match",
+    "emotion_target": "confused",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/confused_02.jpg",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "confused",
+    "n_pairs": 3
+  },
+  {
+    "id": "match_confused_l3_003",
+    "activity_type": "match",
+    "emotion_target": "confused",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/images/photos/confused_03.jpg",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "confused",
+    "n_pairs": 3
+  }
+]

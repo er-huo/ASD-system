@@ -1,0 +1,1010 @@
+[
+  {
+    "id": "social_happy_l1_001",
+    "activity_type": "social",
+    "emotion_target": "happy",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/happy_01.mp4",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "happy",
+    "scenario": "小明收到了生日礼物",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_happy_l1_002",
+    "activity_type": "social",
+    "emotion_target": "happy",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/happy_02.mp4",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "happy",
+    "scenario": "小明收到了生日礼物",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_happy_l1_003",
+    "activity_type": "social",
+    "emotion_target": "happy",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/happy_03.mp4",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "happy",
+    "scenario": "小明收到了生日礼物",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_happy_l2_001",
+    "activity_type": "social",
+    "emotion_target": "happy",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/happy_01.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "angry"
+    ],
+    "correct_answer": "happy",
+    "scenario": "小明收到了生日礼物",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_happy_l2_002",
+    "activity_type": "social",
+    "emotion_target": "happy",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/happy_02.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "angry"
+    ],
+    "correct_answer": "happy",
+    "scenario": "小明收到了生日礼物",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_happy_l2_003",
+    "activity_type": "social",
+    "emotion_target": "happy",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/happy_03.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "angry"
+    ],
+    "correct_answer": "happy",
+    "scenario": "小明收到了生日礼物",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_happy_l3_001",
+    "activity_type": "social",
+    "emotion_target": "happy",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/happy_01.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "happy",
+    "scenario": "小明收到了生日礼物",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_happy_l3_002",
+    "activity_type": "social",
+    "emotion_target": "happy",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/happy_02.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "happy",
+    "scenario": "小明收到了生日礼物",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_happy_l3_003",
+    "activity_type": "social",
+    "emotion_target": "happy",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/happy_03.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "happy",
+    "scenario": "小明收到了生日礼物",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_sad_l1_001",
+    "activity_type": "social",
+    "emotion_target": "sad",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/sad_01.mp4",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "sad",
+    "scenario": "小明的气球飞走了",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_sad_l1_002",
+    "activity_type": "social",
+    "emotion_target": "sad",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/sad_02.mp4",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "sad",
+    "scenario": "小明的气球飞走了",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_sad_l1_003",
+    "activity_type": "social",
+    "emotion_target": "sad",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/sad_03.mp4",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "sad",
+    "scenario": "小明的气球飞走了",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_sad_l2_001",
+    "activity_type": "social",
+    "emotion_target": "sad",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/sad_01.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "sad",
+    "scenario": "小明的气球飞走了",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_sad_l2_002",
+    "activity_type": "social",
+    "emotion_target": "sad",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/sad_02.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "sad",
+    "scenario": "小明的气球飞走了",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_sad_l2_003",
+    "activity_type": "social",
+    "emotion_target": "sad",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/sad_03.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "sad",
+    "scenario": "小明的气球飞走了",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_sad_l3_001",
+    "activity_type": "social",
+    "emotion_target": "sad",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/sad_01.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "sad",
+    "scenario": "小明的气球飞走了",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_sad_l3_002",
+    "activity_type": "social",
+    "emotion_target": "sad",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/sad_02.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "sad",
+    "scenario": "小明的气球飞走了",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_sad_l3_003",
+    "activity_type": "social",
+    "emotion_target": "sad",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/sad_03.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "sad",
+    "scenario": "小明的气球飞走了",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_angry_l1_001",
+    "activity_type": "social",
+    "emotion_target": "angry",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/angry_01.mp4",
+    "choices": [
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "scenario": "小明的积木被推倒了",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_angry_l1_002",
+    "activity_type": "social",
+    "emotion_target": "angry",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/angry_02.mp4",
+    "choices": [
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "scenario": "小明的积木被推倒了",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_angry_l1_003",
+    "activity_type": "social",
+    "emotion_target": "angry",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/angry_03.mp4",
+    "choices": [
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "scenario": "小明的积木被推倒了",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_angry_l2_001",
+    "activity_type": "social",
+    "emotion_target": "angry",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/angry_01.mp4",
+    "choices": [
+      "angry",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "scenario": "小明的积木被推倒了",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_angry_l2_002",
+    "activity_type": "social",
+    "emotion_target": "angry",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/angry_02.mp4",
+    "choices": [
+      "angry",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "scenario": "小明的积木被推倒了",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_angry_l2_003",
+    "activity_type": "social",
+    "emotion_target": "angry",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/angry_03.mp4",
+    "choices": [
+      "angry",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "scenario": "小明的积木被推倒了",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_angry_l3_001",
+    "activity_type": "social",
+    "emotion_target": "angry",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/angry_01.mp4",
+    "choices": [
+      "angry",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "scenario": "小明的积木被推倒了",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_angry_l3_002",
+    "activity_type": "social",
+    "emotion_target": "angry",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/angry_02.mp4",
+    "choices": [
+      "angry",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "scenario": "小明的积木被推倒了",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_angry_l3_003",
+    "activity_type": "social",
+    "emotion_target": "angry",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/angry_03.mp4",
+    "choices": [
+      "angry",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "scenario": "小明的积木被推倒了",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_fear_l1_001",
+    "activity_type": "social",
+    "emotion_target": "fear",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/fear_01.mp4",
+    "choices": [
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "scenario": "小明在黑暗中找不到妈妈",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_fear_l1_002",
+    "activity_type": "social",
+    "emotion_target": "fear",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/fear_02.mp4",
+    "choices": [
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "scenario": "小明在黑暗中找不到妈妈",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_fear_l1_003",
+    "activity_type": "social",
+    "emotion_target": "fear",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/fear_03.mp4",
+    "choices": [
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "scenario": "小明在黑暗中找不到妈妈",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_fear_l2_001",
+    "activity_type": "social",
+    "emotion_target": "fear",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/fear_01.mp4",
+    "choices": [
+      "fear",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "scenario": "小明在黑暗中找不到妈妈",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_fear_l2_002",
+    "activity_type": "social",
+    "emotion_target": "fear",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/fear_02.mp4",
+    "choices": [
+      "fear",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "scenario": "小明在黑暗中找不到妈妈",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_fear_l2_003",
+    "activity_type": "social",
+    "emotion_target": "fear",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/fear_03.mp4",
+    "choices": [
+      "fear",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "scenario": "小明在黑暗中找不到妈妈",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_fear_l3_001",
+    "activity_type": "social",
+    "emotion_target": "fear",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/fear_01.mp4",
+    "choices": [
+      "fear",
+      "angry",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "scenario": "小明在黑暗中找不到妈妈",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_fear_l3_002",
+    "activity_type": "social",
+    "emotion_target": "fear",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/fear_02.mp4",
+    "choices": [
+      "fear",
+      "angry",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "scenario": "小明在黑暗中找不到妈妈",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_fear_l3_003",
+    "activity_type": "social",
+    "emotion_target": "fear",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/fear_03.mp4",
+    "choices": [
+      "fear",
+      "angry",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "scenario": "小明在黑暗中找不到妈妈",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_surprise_l1_001",
+    "activity_type": "social",
+    "emotion_target": "surprise",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/surprise_01.mp4",
+    "choices": [
+      "happy",
+      "surprise"
+    ],
+    "correct_answer": "surprise",
+    "scenario": "小明打开了神秘的盒子",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_surprise_l1_002",
+    "activity_type": "social",
+    "emotion_target": "surprise",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/surprise_02.mp4",
+    "choices": [
+      "happy",
+      "surprise"
+    ],
+    "correct_answer": "surprise",
+    "scenario": "小明打开了神秘的盒子",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_surprise_l1_003",
+    "activity_type": "social",
+    "emotion_target": "surprise",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/surprise_03.mp4",
+    "choices": [
+      "happy",
+      "surprise"
+    ],
+    "correct_answer": "surprise",
+    "scenario": "小明打开了神秘的盒子",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_surprise_l2_001",
+    "activity_type": "social",
+    "emotion_target": "surprise",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/surprise_01.mp4",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "surprise",
+    "scenario": "小明打开了神秘的盒子",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_surprise_l2_002",
+    "activity_type": "social",
+    "emotion_target": "surprise",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/surprise_02.mp4",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "surprise",
+    "scenario": "小明打开了神秘的盒子",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_surprise_l2_003",
+    "activity_type": "social",
+    "emotion_target": "surprise",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/surprise_03.mp4",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "surprise",
+    "scenario": "小明打开了神秘的盒子",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_surprise_l3_001",
+    "activity_type": "social",
+    "emotion_target": "surprise",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/surprise_01.mp4",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "surprise",
+    "scenario": "小明打开了神秘的盒子",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_surprise_l3_002",
+    "activity_type": "social",
+    "emotion_target": "surprise",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/surprise_02.mp4",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "surprise",
+    "scenario": "小明打开了神秘的盒子",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_surprise_l3_003",
+    "activity_type": "social",
+    "emotion_target": "surprise",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/surprise_03.mp4",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "surprise",
+    "scenario": "小明打开了神秘的盒子",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_neutral_l1_001",
+    "activity_type": "social",
+    "emotion_target": "neutral",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/neutral_01.mp4",
+    "choices": [
+      "happy",
+      "neutral"
+    ],
+    "correct_answer": "neutral",
+    "scenario": "小明在安静地看书",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_neutral_l1_002",
+    "activity_type": "social",
+    "emotion_target": "neutral",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/neutral_02.mp4",
+    "choices": [
+      "happy",
+      "neutral"
+    ],
+    "correct_answer": "neutral",
+    "scenario": "小明在安静地看书",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_neutral_l1_003",
+    "activity_type": "social",
+    "emotion_target": "neutral",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/neutral_03.mp4",
+    "choices": [
+      "happy",
+      "neutral"
+    ],
+    "correct_answer": "neutral",
+    "scenario": "小明在安静地看书",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_neutral_l2_001",
+    "activity_type": "social",
+    "emotion_target": "neutral",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/neutral_01.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "neutral",
+    "scenario": "小明在安静地看书",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_neutral_l2_002",
+    "activity_type": "social",
+    "emotion_target": "neutral",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/neutral_02.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "neutral",
+    "scenario": "小明在安静地看书",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_neutral_l2_003",
+    "activity_type": "social",
+    "emotion_target": "neutral",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/neutral_03.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "neutral",
+    "scenario": "小明在安静地看书",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_neutral_l3_001",
+    "activity_type": "social",
+    "emotion_target": "neutral",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/neutral_01.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "neutral",
+    "scenario": "小明在安静地看书",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_neutral_l3_002",
+    "activity_type": "social",
+    "emotion_target": "neutral",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/neutral_02.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "neutral",
+    "scenario": "小明在安静地看书",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_neutral_l3_003",
+    "activity_type": "social",
+    "emotion_target": "neutral",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/neutral_03.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "neutral",
+    "scenario": "小明在安静地看书",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_confused_l1_001",
+    "activity_type": "social",
+    "emotion_target": "confused",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/confused_01.mp4",
+    "choices": [
+      "confused",
+      "neutral"
+    ],
+    "correct_answer": "confused",
+    "scenario": "小明看着复杂的地图",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_confused_l1_002",
+    "activity_type": "social",
+    "emotion_target": "confused",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/confused_02.mp4",
+    "choices": [
+      "confused",
+      "neutral"
+    ],
+    "correct_answer": "confused",
+    "scenario": "小明看着复杂的地图",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_confused_l1_003",
+    "activity_type": "social",
+    "emotion_target": "confused",
+    "difficulty_level": 1,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/confused_03.mp4",
+    "choices": [
+      "confused",
+      "neutral"
+    ],
+    "correct_answer": "confused",
+    "scenario": "小明看着复杂的地图",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_confused_l2_001",
+    "activity_type": "social",
+    "emotion_target": "confused",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/confused_01.mp4",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad"
+    ],
+    "correct_answer": "confused",
+    "scenario": "小明看着复杂的地图",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_confused_l2_002",
+    "activity_type": "social",
+    "emotion_target": "confused",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/confused_02.mp4",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad"
+    ],
+    "correct_answer": "confused",
+    "scenario": "小明看着复杂的地图",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_confused_l2_003",
+    "activity_type": "social",
+    "emotion_target": "confused",
+    "difficulty_level": 2,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/confused_03.mp4",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad"
+    ],
+    "correct_answer": "confused",
+    "scenario": "小明看着复杂的地图",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_confused_l3_001",
+    "activity_type": "social",
+    "emotion_target": "confused",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/confused_01.mp4",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "confused",
+    "scenario": "小明看着复杂的地图",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_confused_l3_002",
+    "activity_type": "social",
+    "emotion_target": "confused",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/confused_02.mp4",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "confused",
+    "scenario": "小明看着复杂的地图",
+    "question_text": "视频里的小明现在是什么心情？"
+  },
+  {
+    "id": "social_confused_l3_003",
+    "activity_type": "social",
+    "emotion_target": "confused",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/social/confused_03.mp4",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "confused",
+    "scenario": "小明看着复杂的地图",
+    "question_text": "视频里的小明现在是什么心情？"
+  }
+]

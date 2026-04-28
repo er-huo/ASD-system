@@ -1,0 +1,884 @@
+[
+  {
+    "id": "detective_happy_l1_001",
+    "activity_type": "detective",
+    "emotion_target": "happy",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/happy_01.png",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "happy"
+  },
+  {
+    "id": "detective_happy_l1_002",
+    "activity_type": "detective",
+    "emotion_target": "happy",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/happy_02.png",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "happy"
+  },
+  {
+    "id": "detective_happy_l1_003",
+    "activity_type": "detective",
+    "emotion_target": "happy",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/happy_03.png",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "happy"
+  },
+  {
+    "id": "detective_happy_l2_001",
+    "activity_type": "detective",
+    "emotion_target": "happy",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/happy_01.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "angry"
+    ],
+    "correct_answer": "happy"
+  },
+  {
+    "id": "detective_happy_l2_002",
+    "activity_type": "detective",
+    "emotion_target": "happy",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/happy_02.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "angry"
+    ],
+    "correct_answer": "happy"
+  },
+  {
+    "id": "detective_happy_l2_003",
+    "activity_type": "detective",
+    "emotion_target": "happy",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/happy_03.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "angry"
+    ],
+    "correct_answer": "happy"
+  },
+  {
+    "id": "detective_happy_l3_001",
+    "activity_type": "detective",
+    "emotion_target": "happy",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/happy_01.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "happy"
+  },
+  {
+    "id": "detective_happy_l3_002",
+    "activity_type": "detective",
+    "emotion_target": "happy",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/happy_02.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "happy"
+  },
+  {
+    "id": "detective_happy_l3_003",
+    "activity_type": "detective",
+    "emotion_target": "happy",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/happy_03.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "happy"
+  },
+  {
+    "id": "detective_sad_l1_001",
+    "activity_type": "detective",
+    "emotion_target": "sad",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/sad_01.png",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "sad"
+  },
+  {
+    "id": "detective_sad_l1_002",
+    "activity_type": "detective",
+    "emotion_target": "sad",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/sad_02.png",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "sad"
+  },
+  {
+    "id": "detective_sad_l1_003",
+    "activity_type": "detective",
+    "emotion_target": "sad",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/sad_03.png",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "sad"
+  },
+  {
+    "id": "detective_sad_l2_001",
+    "activity_type": "detective",
+    "emotion_target": "sad",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/sad_01.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "sad"
+  },
+  {
+    "id": "detective_sad_l2_002",
+    "activity_type": "detective",
+    "emotion_target": "sad",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/sad_02.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "sad"
+  },
+  {
+    "id": "detective_sad_l2_003",
+    "activity_type": "detective",
+    "emotion_target": "sad",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/sad_03.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "sad"
+  },
+  {
+    "id": "detective_sad_l3_001",
+    "activity_type": "detective",
+    "emotion_target": "sad",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/sad_01.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "sad"
+  },
+  {
+    "id": "detective_sad_l3_002",
+    "activity_type": "detective",
+    "emotion_target": "sad",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/sad_02.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "sad"
+  },
+  {
+    "id": "detective_sad_l3_003",
+    "activity_type": "detective",
+    "emotion_target": "sad",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/sad_03.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "sad"
+  },
+  {
+    "id": "detective_angry_l1_001",
+    "activity_type": "detective",
+    "emotion_target": "angry",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/angry_01.png",
+    "choices": [
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "angry"
+  },
+  {
+    "id": "detective_angry_l1_002",
+    "activity_type": "detective",
+    "emotion_target": "angry",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/angry_02.png",
+    "choices": [
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "angry"
+  },
+  {
+    "id": "detective_angry_l1_003",
+    "activity_type": "detective",
+    "emotion_target": "angry",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/angry_03.png",
+    "choices": [
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "angry"
+  },
+  {
+    "id": "detective_angry_l2_001",
+    "activity_type": "detective",
+    "emotion_target": "angry",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/angry_01.jpg",
+    "choices": [
+      "angry",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "angry"
+  },
+  {
+    "id": "detective_angry_l2_002",
+    "activity_type": "detective",
+    "emotion_target": "angry",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/angry_02.jpg",
+    "choices": [
+      "angry",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "angry"
+  },
+  {
+    "id": "detective_angry_l2_003",
+    "activity_type": "detective",
+    "emotion_target": "angry",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/angry_03.jpg",
+    "choices": [
+      "angry",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "angry"
+  },
+  {
+    "id": "detective_angry_l3_001",
+    "activity_type": "detective",
+    "emotion_target": "angry",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/angry_01.mp4",
+    "choices": [
+      "angry",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "angry"
+  },
+  {
+    "id": "detective_angry_l3_002",
+    "activity_type": "detective",
+    "emotion_target": "angry",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/angry_02.mp4",
+    "choices": [
+      "angry",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "angry"
+  },
+  {
+    "id": "detective_angry_l3_003",
+    "activity_type": "detective",
+    "emotion_target": "angry",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/angry_03.mp4",
+    "choices": [
+      "angry",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "angry"
+  },
+  {
+    "id": "detective_fear_l1_001",
+    "activity_type": "detective",
+    "emotion_target": "fear",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/fear_01.png",
+    "choices": [
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "fear"
+  },
+  {
+    "id": "detective_fear_l1_002",
+    "activity_type": "detective",
+    "emotion_target": "fear",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/fear_02.png",
+    "choices": [
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "fear"
+  },
+  {
+    "id": "detective_fear_l1_003",
+    "activity_type": "detective",
+    "emotion_target": "fear",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/fear_03.png",
+    "choices": [
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "fear"
+  },
+  {
+    "id": "detective_fear_l2_001",
+    "activity_type": "detective",
+    "emotion_target": "fear",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/fear_01.jpg",
+    "choices": [
+      "fear",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "fear"
+  },
+  {
+    "id": "detective_fear_l2_002",
+    "activity_type": "detective",
+    "emotion_target": "fear",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/fear_02.jpg",
+    "choices": [
+      "fear",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "fear"
+  },
+  {
+    "id": "detective_fear_l2_003",
+    "activity_type": "detective",
+    "emotion_target": "fear",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/fear_03.jpg",
+    "choices": [
+      "fear",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "fear"
+  },
+  {
+    "id": "detective_fear_l3_001",
+    "activity_type": "detective",
+    "emotion_target": "fear",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/fear_01.mp4",
+    "choices": [
+      "fear",
+      "angry",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "fear"
+  },
+  {
+    "id": "detective_fear_l3_002",
+    "activity_type": "detective",
+    "emotion_target": "fear",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/fear_02.mp4",
+    "choices": [
+      "fear",
+      "angry",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "fear"
+  },
+  {
+    "id": "detective_fear_l3_003",
+    "activity_type": "detective",
+    "emotion_target": "fear",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/fear_03.mp4",
+    "choices": [
+      "fear",
+      "angry",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "fear"
+  },
+  {
+    "id": "detective_surprise_l1_001",
+    "activity_type": "detective",
+    "emotion_target": "surprise",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/surprise_01.png",
+    "choices": [
+      "happy",
+      "surprise"
+    ],
+    "correct_answer": "surprise"
+  },
+  {
+    "id": "detective_surprise_l1_002",
+    "activity_type": "detective",
+    "emotion_target": "surprise",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/surprise_02.png",
+    "choices": [
+      "happy",
+      "surprise"
+    ],
+    "correct_answer": "surprise"
+  },
+  {
+    "id": "detective_surprise_l1_003",
+    "activity_type": "detective",
+    "emotion_target": "surprise",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/surprise_03.png",
+    "choices": [
+      "happy",
+      "surprise"
+    ],
+    "correct_answer": "surprise"
+  },
+  {
+    "id": "detective_surprise_l2_001",
+    "activity_type": "detective",
+    "emotion_target": "surprise",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/surprise_01.jpg",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "surprise"
+  },
+  {
+    "id": "detective_surprise_l2_002",
+    "activity_type": "detective",
+    "emotion_target": "surprise",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/surprise_02.jpg",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "surprise"
+  },
+  {
+    "id": "detective_surprise_l2_003",
+    "activity_type": "detective",
+    "emotion_target": "surprise",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/surprise_03.jpg",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "surprise"
+  },
+  {
+    "id": "detective_surprise_l3_001",
+    "activity_type": "detective",
+    "emotion_target": "surprise",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/surprise_01.mp4",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "surprise"
+  },
+  {
+    "id": "detective_surprise_l3_002",
+    "activity_type": "detective",
+    "emotion_target": "surprise",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/surprise_02.mp4",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "surprise"
+  },
+  {
+    "id": "detective_surprise_l3_003",
+    "activity_type": "detective",
+    "emotion_target": "surprise",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/surprise_03.mp4",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "surprise"
+  },
+  {
+    "id": "detective_neutral_l1_001",
+    "activity_type": "detective",
+    "emotion_target": "neutral",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/neutral_01.png",
+    "choices": [
+      "happy",
+      "neutral"
+    ],
+    "correct_answer": "neutral"
+  },
+  {
+    "id": "detective_neutral_l1_002",
+    "activity_type": "detective",
+    "emotion_target": "neutral",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/neutral_02.png",
+    "choices": [
+      "happy",
+      "neutral"
+    ],
+    "correct_answer": "neutral"
+  },
+  {
+    "id": "detective_neutral_l1_003",
+    "activity_type": "detective",
+    "emotion_target": "neutral",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/neutral_03.png",
+    "choices": [
+      "happy",
+      "neutral"
+    ],
+    "correct_answer": "neutral"
+  },
+  {
+    "id": "detective_neutral_l2_001",
+    "activity_type": "detective",
+    "emotion_target": "neutral",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/neutral_01.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "neutral"
+  },
+  {
+    "id": "detective_neutral_l2_002",
+    "activity_type": "detective",
+    "emotion_target": "neutral",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/neutral_02.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "neutral"
+  },
+  {
+    "id": "detective_neutral_l2_003",
+    "activity_type": "detective",
+    "emotion_target": "neutral",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/neutral_03.jpg",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "neutral"
+  },
+  {
+    "id": "detective_neutral_l3_001",
+    "activity_type": "detective",
+    "emotion_target": "neutral",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/neutral_01.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "neutral"
+  },
+  {
+    "id": "detective_neutral_l3_002",
+    "activity_type": "detective",
+    "emotion_target": "neutral",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/neutral_02.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "neutral"
+  },
+  {
+    "id": "detective_neutral_l3_003",
+    "activity_type": "detective",
+    "emotion_target": "neutral",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/neutral_03.mp4",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "neutral"
+  },
+  {
+    "id": "detective_confused_l1_001",
+    "activity_type": "detective",
+    "emotion_target": "confused",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/confused_01.png",
+    "choices": [
+      "confused",
+      "neutral"
+    ],
+    "correct_answer": "confused"
+  },
+  {
+    "id": "detective_confused_l1_002",
+    "activity_type": "detective",
+    "emotion_target": "confused",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/confused_02.png",
+    "choices": [
+      "confused",
+      "neutral"
+    ],
+    "correct_answer": "confused"
+  },
+  {
+    "id": "detective_confused_l1_003",
+    "activity_type": "detective",
+    "emotion_target": "confused",
+    "difficulty_level": 1,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/pcs/confused_03.png",
+    "choices": [
+      "confused",
+      "neutral"
+    ],
+    "correct_answer": "confused"
+  },
+  {
+    "id": "detective_confused_l2_001",
+    "activity_type": "detective",
+    "emotion_target": "confused",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/confused_01.jpg",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad"
+    ],
+    "correct_answer": "confused"
+  },
+  {
+    "id": "detective_confused_l2_002",
+    "activity_type": "detective",
+    "emotion_target": "confused",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/confused_02.jpg",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad"
+    ],
+    "correct_answer": "confused"
+  },
+  {
+    "id": "detective_confused_l2_003",
+    "activity_type": "detective",
+    "emotion_target": "confused",
+    "difficulty_level": 2,
+    "stimuli_type": "image",
+    "stimuli_path": "assets/images/photos/confused_03.jpg",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad"
+    ],
+    "correct_answer": "confused"
+  },
+  {
+    "id": "detective_confused_l3_001",
+    "activity_type": "detective",
+    "emotion_target": "confused",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/confused_01.mp4",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "confused"
+  },
+  {
+    "id": "detective_confused_l3_002",
+    "activity_type": "detective",
+    "emotion_target": "confused",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/confused_02.mp4",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "confused"
+  },
+  {
+    "id": "detective_confused_l3_003",
+    "activity_type": "detective",
+    "emotion_target": "confused",
+    "difficulty_level": 3,
+    "stimuli_type": "video",
+    "stimuli_path": "assets/videos/confused_03.mp4",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "confused"
+  }
+]

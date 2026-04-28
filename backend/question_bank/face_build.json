@@ -1,0 +1,1199 @@
+[
+  {
+    "id": "face_build_happy_l1_001",
+    "activity_type": "face_build",
+    "emotion_target": "happy",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/happy/set_01",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "happy",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_happy_l1_002",
+    "activity_type": "face_build",
+    "emotion_target": "happy",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/happy/set_02",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "happy",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_happy_l1_003",
+    "activity_type": "face_build",
+    "emotion_target": "happy",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/happy/set_03",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "happy",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_happy_l2_001",
+    "activity_type": "face_build",
+    "emotion_target": "happy",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/happy/set_01",
+    "choices": [
+      "happy",
+      "sad",
+      "angry"
+    ],
+    "correct_answer": "happy",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_happy_l2_002",
+    "activity_type": "face_build",
+    "emotion_target": "happy",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/happy/set_02",
+    "choices": [
+      "happy",
+      "sad",
+      "angry"
+    ],
+    "correct_answer": "happy",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_happy_l2_003",
+    "activity_type": "face_build",
+    "emotion_target": "happy",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/happy/set_03",
+    "choices": [
+      "happy",
+      "sad",
+      "angry"
+    ],
+    "correct_answer": "happy",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_happy_l3_001",
+    "activity_type": "face_build",
+    "emotion_target": "happy",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/happy/set_01",
+    "choices": [
+      "happy",
+      "sad",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "happy",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  },
+  {
+    "id": "face_build_happy_l3_002",
+    "activity_type": "face_build",
+    "emotion_target": "happy",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/happy/set_02",
+    "choices": [
+      "happy",
+      "sad",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "happy",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  },
+  {
+    "id": "face_build_happy_l3_003",
+    "activity_type": "face_build",
+    "emotion_target": "happy",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/happy/set_03",
+    "choices": [
+      "happy",
+      "sad",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "happy",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  },
+  {
+    "id": "face_build_sad_l1_001",
+    "activity_type": "face_build",
+    "emotion_target": "sad",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/sad/set_01",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "sad",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_sad_l1_002",
+    "activity_type": "face_build",
+    "emotion_target": "sad",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/sad/set_02",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "sad",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_sad_l1_003",
+    "activity_type": "face_build",
+    "emotion_target": "sad",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/sad/set_03",
+    "choices": [
+      "happy",
+      "sad"
+    ],
+    "correct_answer": "sad",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_sad_l2_001",
+    "activity_type": "face_build",
+    "emotion_target": "sad",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/sad/set_01",
+    "choices": [
+      "happy",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "sad",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_sad_l2_002",
+    "activity_type": "face_build",
+    "emotion_target": "sad",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/sad/set_02",
+    "choices": [
+      "happy",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "sad",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_sad_l2_003",
+    "activity_type": "face_build",
+    "emotion_target": "sad",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/sad/set_03",
+    "choices": [
+      "happy",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "sad",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_sad_l3_001",
+    "activity_type": "face_build",
+    "emotion_target": "sad",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/sad/set_01",
+    "choices": [
+      "happy",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "sad",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  },
+  {
+    "id": "face_build_sad_l3_002",
+    "activity_type": "face_build",
+    "emotion_target": "sad",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/sad/set_02",
+    "choices": [
+      "happy",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "sad",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  },
+  {
+    "id": "face_build_sad_l3_003",
+    "activity_type": "face_build",
+    "emotion_target": "sad",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/sad/set_03",
+    "choices": [
+      "happy",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "sad",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  },
+  {
+    "id": "face_build_angry_l1_001",
+    "activity_type": "face_build",
+    "emotion_target": "angry",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/angry/set_01",
+    "choices": [
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_angry_l1_002",
+    "activity_type": "face_build",
+    "emotion_target": "angry",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/angry/set_02",
+    "choices": [
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_angry_l1_003",
+    "activity_type": "face_build",
+    "emotion_target": "angry",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/angry/set_03",
+    "choices": [
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_angry_l2_001",
+    "activity_type": "face_build",
+    "emotion_target": "angry",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/angry/set_01",
+    "choices": [
+      "angry",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_angry_l2_002",
+    "activity_type": "face_build",
+    "emotion_target": "angry",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/angry/set_02",
+    "choices": [
+      "angry",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_angry_l2_003",
+    "activity_type": "face_build",
+    "emotion_target": "angry",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/angry/set_03",
+    "choices": [
+      "angry",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_angry_l3_001",
+    "activity_type": "face_build",
+    "emotion_target": "angry",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/angry/set_01",
+    "choices": [
+      "angry",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  },
+  {
+    "id": "face_build_angry_l3_002",
+    "activity_type": "face_build",
+    "emotion_target": "angry",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/angry/set_02",
+    "choices": [
+      "angry",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  },
+  {
+    "id": "face_build_angry_l3_003",
+    "activity_type": "face_build",
+    "emotion_target": "angry",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/angry/set_03",
+    "choices": [
+      "angry",
+      "sad",
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "angry",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  },
+  {
+    "id": "face_build_fear_l1_001",
+    "activity_type": "face_build",
+    "emotion_target": "fear",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/fear/set_01",
+    "choices": [
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_fear_l1_002",
+    "activity_type": "face_build",
+    "emotion_target": "fear",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/fear/set_02",
+    "choices": [
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_fear_l1_003",
+    "activity_type": "face_build",
+    "emotion_target": "fear",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/fear/set_03",
+    "choices": [
+      "fear",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_fear_l2_001",
+    "activity_type": "face_build",
+    "emotion_target": "fear",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/fear/set_01",
+    "choices": [
+      "fear",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_fear_l2_002",
+    "activity_type": "face_build",
+    "emotion_target": "fear",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/fear/set_02",
+    "choices": [
+      "fear",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_fear_l2_003",
+    "activity_type": "face_build",
+    "emotion_target": "fear",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/fear/set_03",
+    "choices": [
+      "fear",
+      "angry",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_fear_l3_001",
+    "activity_type": "face_build",
+    "emotion_target": "fear",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/fear/set_01",
+    "choices": [
+      "fear",
+      "angry",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  },
+  {
+    "id": "face_build_fear_l3_002",
+    "activity_type": "face_build",
+    "emotion_target": "fear",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/fear/set_02",
+    "choices": [
+      "fear",
+      "angry",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  },
+  {
+    "id": "face_build_fear_l3_003",
+    "activity_type": "face_build",
+    "emotion_target": "fear",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/fear/set_03",
+    "choices": [
+      "fear",
+      "angry",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "fear",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  },
+  {
+    "id": "face_build_surprise_l1_001",
+    "activity_type": "face_build",
+    "emotion_target": "surprise",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/surprise/set_01",
+    "choices": [
+      "happy",
+      "surprise"
+    ],
+    "correct_answer": "surprise",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_surprise_l1_002",
+    "activity_type": "face_build",
+    "emotion_target": "surprise",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/surprise/set_02",
+    "choices": [
+      "happy",
+      "surprise"
+    ],
+    "correct_answer": "surprise",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_surprise_l1_003",
+    "activity_type": "face_build",
+    "emotion_target": "surprise",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/surprise/set_03",
+    "choices": [
+      "happy",
+      "surprise"
+    ],
+    "correct_answer": "surprise",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_surprise_l2_001",
+    "activity_type": "face_build",
+    "emotion_target": "surprise",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/surprise/set_01",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "surprise",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_surprise_l2_002",
+    "activity_type": "face_build",
+    "emotion_target": "surprise",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/surprise/set_02",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "surprise",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_surprise_l2_003",
+    "activity_type": "face_build",
+    "emotion_target": "surprise",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/surprise/set_03",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral"
+    ],
+    "correct_answer": "surprise",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_surprise_l3_001",
+    "activity_type": "face_build",
+    "emotion_target": "surprise",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/surprise/set_01",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "surprise",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  },
+  {
+    "id": "face_build_surprise_l3_002",
+    "activity_type": "face_build",
+    "emotion_target": "surprise",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/surprise/set_02",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "surprise",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  },
+  {
+    "id": "face_build_surprise_l3_003",
+    "activity_type": "face_build",
+    "emotion_target": "surprise",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/surprise/set_03",
+    "choices": [
+      "happy",
+      "surprise",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "surprise",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  },
+  {
+    "id": "face_build_neutral_l1_001",
+    "activity_type": "face_build",
+    "emotion_target": "neutral",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/neutral/set_01",
+    "choices": [
+      "happy",
+      "neutral"
+    ],
+    "correct_answer": "neutral",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_neutral_l1_002",
+    "activity_type": "face_build",
+    "emotion_target": "neutral",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/neutral/set_02",
+    "choices": [
+      "happy",
+      "neutral"
+    ],
+    "correct_answer": "neutral",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_neutral_l1_003",
+    "activity_type": "face_build",
+    "emotion_target": "neutral",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/neutral/set_03",
+    "choices": [
+      "happy",
+      "neutral"
+    ],
+    "correct_answer": "neutral",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_neutral_l2_001",
+    "activity_type": "face_build",
+    "emotion_target": "neutral",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/neutral/set_01",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "neutral",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_neutral_l2_002",
+    "activity_type": "face_build",
+    "emotion_target": "neutral",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/neutral/set_02",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "neutral",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_neutral_l2_003",
+    "activity_type": "face_build",
+    "emotion_target": "neutral",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/neutral/set_03",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral"
+    ],
+    "correct_answer": "neutral",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_neutral_l3_001",
+    "activity_type": "face_build",
+    "emotion_target": "neutral",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/neutral/set_01",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "neutral",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  },
+  {
+    "id": "face_build_neutral_l3_002",
+    "activity_type": "face_build",
+    "emotion_target": "neutral",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/neutral/set_02",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "neutral",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  },
+  {
+    "id": "face_build_neutral_l3_003",
+    "activity_type": "face_build",
+    "emotion_target": "neutral",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/neutral/set_03",
+    "choices": [
+      "happy",
+      "sad",
+      "neutral",
+      "confused"
+    ],
+    "correct_answer": "neutral",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  },
+  {
+    "id": "face_build_confused_l1_001",
+    "activity_type": "face_build",
+    "emotion_target": "confused",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/confused/set_01",
+    "choices": [
+      "confused",
+      "neutral"
+    ],
+    "correct_answer": "confused",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_confused_l1_002",
+    "activity_type": "face_build",
+    "emotion_target": "confused",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/confused/set_02",
+    "choices": [
+      "confused",
+      "neutral"
+    ],
+    "correct_answer": "confused",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_confused_l1_003",
+    "activity_type": "face_build",
+    "emotion_target": "confused",
+    "difficulty_level": 1,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/confused/set_03",
+    "choices": [
+      "confused",
+      "neutral"
+    ],
+    "correct_answer": "confused",
+    "elements": [
+      "eyes",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_confused_l2_001",
+    "activity_type": "face_build",
+    "emotion_target": "confused",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/confused/set_01",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad"
+    ],
+    "correct_answer": "confused",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_confused_l2_002",
+    "activity_type": "face_build",
+    "emotion_target": "confused",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/confused/set_02",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad"
+    ],
+    "correct_answer": "confused",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_confused_l2_003",
+    "activity_type": "face_build",
+    "emotion_target": "confused",
+    "difficulty_level": 2,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/confused/set_03",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad"
+    ],
+    "correct_answer": "confused",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth"
+    ]
+  },
+  {
+    "id": "face_build_confused_l3_001",
+    "activity_type": "face_build",
+    "emotion_target": "confused",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/confused/set_01",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "confused",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  },
+  {
+    "id": "face_build_confused_l3_002",
+    "activity_type": "face_build",
+    "emotion_target": "confused",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/confused/set_02",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "confused",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  },
+  {
+    "id": "face_build_confused_l3_003",
+    "activity_type": "face_build",
+    "emotion_target": "confused",
+    "difficulty_level": 3,
+    "stimuli_type": "composite",
+    "stimuli_path": "assets/face_parts/confused/set_03",
+    "choices": [
+      "confused",
+      "neutral",
+      "sad",
+      "fear"
+    ],
+    "correct_answer": "confused",
+    "elements": [
+      "eyes",
+      "eyebrows",
+      "mouth",
+      "eye_outline"
+    ]
+  }
+]
