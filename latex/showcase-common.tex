@@ -1,0 +1,17 @@
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+
+\setlist[itemize]{itemsep=0.4em, topsep=0.6em}
+\newcommand{\ProjectCoverImage}{assets/cover.png}
+\newcommand{\ShowcaseCover}{%
+  \clearpage
+  \newgeometry{margin=0pt}%
+  \begin{titlepage}
+    \thispagestyle{empty}%
+    \noindent\includegraphics[width=\paperwidth,height=\paperheight]{\ProjectCoverImage}%
+  \end{titlepage}
+  \restoregeometry
+  \clearpage
+}
