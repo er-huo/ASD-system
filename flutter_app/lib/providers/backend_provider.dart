@@ -5,15 +5,17 @@ import '../services/websocket_service.dart';
 
 final backendUrlProvider = FutureProvider<String>((ref) async {
   final prefs = await SharedPreferences.getInstance();
-  return prefs.getString('backend_url') ?? 'http://192.168.1.100:8000';
+  return prefs.getString('backend_url') ?? 'http://127.0.0.1:8000';
 });
 
+// Uses ref.read (not watch) so provider is NOT recreated when URL loads,
+// preventing the in-flight request from being aborted.
 final apiServiceProvider = Provider<ApiService>((ref) {
-  final asyncUrl = ref.watch(backendUrlProvider);
-  final url = asyncUrl.valueOrNull ?? 'http://192.168.1.100:8000';
-  final svc = ApiService(baseUrl: url);
-  ref.onDispose(svc.close);
-  return svc;
+  // Read synchronously — falls back to 127.0.0.1 until prefs load,
+  // then stays stable (no dispose/rebuild on FutureProvider resolve).
+  final asyncUrl = ref.read(backendUrlProvider);
+  final url = asyncUrl.valueOrNull ?? 'http://127.0.0.1:8000';
+  return ApiService(baseUrl: url);
 });
 
 final webSocketServiceProvider = Provider<WebSocketService>((ref) {

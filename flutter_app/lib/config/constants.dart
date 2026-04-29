@@ -17,14 +17,17 @@ const Map<String, Color> kEmotionColors = {
 };
 
 const Map<String, String> kEmotionAudio = {
-  'happy':    'assets/audio/happy.mp3',
-  'sad':      'assets/audio/sad.mp3',
-  'angry':    'assets/audio/angry.mp3',
-  'fear':     'assets/audio/fear.mp3',
-  'neutral':  'assets/audio/neutral.mp3',
-  'surprise': 'assets/audio/surprise.mp3',
-  'confused': 'assets/audio/confused.mp3',
+  'happy':    'assets/audio/happy.wav',
+  'sad':      'assets/audio/sad.wav',
+  'angry':    'assets/audio/angry.wav',
+  'fear':     'assets/audio/fear.wav',
+  'neutral':  'assets/audio/neutral.wav',
+  'surprise': 'assets/audio/surprise.wav',
+  'confused': 'assets/audio/confused.wav',
 };
+
+const String kAudioCorrect = 'assets/audio/correct.wav';
+const String kAudioWrong   = 'assets/audio/wrong.wav';
 
 const Map<String, String> kEmotionAnimations = {
   'happy':    'wave',

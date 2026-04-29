@@ -94,7 +94,9 @@ class _TrainingScreenState extends ConsumerState<TrainingScreen> {
         sessionId: _sessionId!, emotionTarget: q.emotionTarget,
         userResponse: choice, responseMs: responseMs, hintShown: _hintShown);
       if (!mounted) { _submitting = false; return; }
-      final audioPath = result.isCorrect ? kEmotionAudio[q.emotionTarget] : null;
+      final audioPath = result.isCorrect
+          ? kEmotionAudio[q.emotionTarget]  // 答对：播放对应情绪音乐
+          : kAudioWrong;                     // 答错：播放轻柔提示音
       if (audioPath != null) {
         try { await _player.setAsset(audioPath); await _player.play(); } catch (_) {}
       }
