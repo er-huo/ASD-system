@@ -234,6 +234,106 @@ class _TrainingScreenState extends ConsumerState<TrainingScreen> {
     );
   }
 
+  // ── Match activity ───────────────────────────────────────────────────────────
+
+  String? _matchSelectedEmotion;
+
+  Widget _buildMatchScreen() {
+    final q = _currentQuestion!;
+    const emotionLabels = {
+      'happy': ('😊', '开心'), 'sad': ('😢', '伤心'), 'angry': ('😠', '生气'),
+      'fear': ('😨', '害怕'), 'surprise': ('😮', '惊讶'),
+      'neutral': ('😐', '平静'), 'confused': ('😕', '困惑'),
+    };
+    return Scaffold(
+      backgroundColor: const Color(0xFFFFF8E1),
+      appBar: AppBar(
+        title: Text('第${_questionIndex + 1}题 / 共$kQuestionsPerSession题  ·  表情连连看'),
+        backgroundColor: const Color(0xFFFFAA00),
+      ),
+      body: Row(children: [
+        Expanded(
+          flex: 5,
+          child: Center(child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            const Text('这是什么表情？', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 20),
+            AnimatedContainer(
+              duration: const Duration(milliseconds: 200),
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: Colors.white, borderRadius: BorderRadius.circular(20),
+                border: Border.all(
+                  color: _matchSelectedEmotion != null
+                      ? (kEmotionColors[_matchSelectedEmotion] ?? Colors.orange)
+                      : Colors.orange,
+                  width: 3,
+                ),
+                boxShadow: [BoxShadow(color: Colors.orange.withValues(alpha: 0.2), blurRadius: 12)],
+              ),
+              child: _StimulusImage(stimuliPath: q.stimuliPath, emotionTarget: q.emotionTarget),
+            ),
+            const SizedBox(height: 10),
+            const Text('↓ 点右侧标签配对', style: TextStyle(color: Colors.grey, fontSize: 13)),
+          ])),
+        ),
+        const Icon(Icons.arrow_forward_ios, color: Colors.orange, size: 28),
+        Expanded(
+          flex: 5,
+          child: Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: q.choices.map((emotion) {
+                final label = emotionLabels[emotion];
+                final color = kEmotionColors[emotion] ?? Colors.grey;
+                final isSelected = _matchSelectedEmotion == emotion;
+                return Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8),
+                  child: GestureDetector(
+                    onTap: _submitting ? null : () => _submitMatchAnswer(emotion),
+                    child: AnimatedContainer(
+                      duration: const Duration(milliseconds: 200),
+                      width: double.infinity,
+                      padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 20),
+                      decoration: BoxDecoration(
+                        color: isSelected ? color : color.withValues(alpha: 0.1),
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all(color: color, width: isSelected ? 3 : 1.5),
+                        boxShadow: isSelected
+                            ? [BoxShadow(color: color.withValues(alpha: 0.4), blurRadius: 10)]
+                            : [],
+                      ),
+                      child: Row(children: [
+                        Text(label?.$1 ?? '', style: const TextStyle(fontSize: 30)),
+                        const SizedBox(width: 12),
+                        Text(label?.$2 ?? emotion, style: TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold,
+                          color: isSelected ? Colors.white : color,
+                        )),
+                      ]),
+                    ),
+                  ),
+                );
+              }).toList(),
+            ),
+          ),
+        ),
+        SizedBox(
+          width: 110,
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+            TinoRobot(emotion: _tinoEmotion, robotType: 'tino', size: 100),
+          ]),
+        ),
+      ]),
+    );
+  }
+
+  Future<void> _submitMatchAnswer(String choice) async {
+    setState(() { _matchSelectedEmotion = choice; });
+    await _submitAnswer(choice);
+    if (mounted) setState(() { _matchSelectedEmotion = null; });
+  }
+
   Future<void> _endSession() async {
     Map<String, dynamic> summary = {};
     try { summary = await ref.read(apiServiceProvider).endSession(_sessionId!); } catch (_) {}
@@ -251,6 +351,9 @@ class _TrainingScreenState extends ConsumerState<TrainingScreen> {
 
     // Diary activity gets its own dedicated UI
     if (widget.activityType == 'diary') return _buildDiaryScreen();
+
+    // Match activity: left image + right label cards
+    if (widget.activityType == 'match' && _currentQuestion != null) return _buildMatchScreen();
     final q = _currentQuestion;
     return Scaffold(
       backgroundColor: const Color(0xFFFFF8E1),
