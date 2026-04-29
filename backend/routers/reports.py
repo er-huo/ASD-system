@@ -13,3 +13,13 @@ def get_report(child_id: str, db: Session = Depends(get_db)):
     if not child:
         raise HTTPException(404, "Child not found")
     return data_service.get_report(db, child_id)
+
+@router.get("/session/{session_id}/emotions")
+def get_session_emotions(session_id: str, db: Session = Depends(get_db)):
+    """Return emotion logs for a session, for the trend chart."""
+    logs = (db.query(models.EmotionLog)
+            .filter(models.EmotionLog.session_id == session_id)
+            .order_by(models.EmotionLog.logged_at)
+            .all())
+    return [{"emotion": l.emotion, "confidence": float(l.confidence),
+             "logged_at": l.logged_at.isoformat()} for l in logs]

@@ -75,5 +75,11 @@ class ApiService {
     return jsonDecode(resp.body) as Map<String, dynamic>;
   }
 
+  Future<dynamic> get(String path) async {
+    final resp = await httpClient.get(Uri.parse('$baseUrl$path'));
+    if (resp.statusCode != 200) throw Exception('GET $path failed');
+    return jsonDecode(resp.body);
+  }
+
   void close() => httpClient.close();
 }
