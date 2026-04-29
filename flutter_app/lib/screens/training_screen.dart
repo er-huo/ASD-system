@@ -10,6 +10,7 @@ import '../providers/backend_provider.dart';
 import '../widgets/tino_robot.dart';
 import '../widgets/emotion_button.dart';
 import '../widgets/hint_card.dart';
+import '../widgets/camera_overlay.dart';
 
 class TrainingScreen extends ConsumerStatefulWidget {
   final String childId;
@@ -843,11 +844,22 @@ class _TrainingScreenState extends ConsumerState<TrainingScreen> {
     // Social story activity: storybook scene panel + emotion choices
     if (widget.activityType == 'social' && _currentQuestion != null) return _buildSocialScreen();
     final q = _currentQuestion;
+    final backendUrl = ref.read(backendUrlProvider).valueOrNull ?? 'http://127.0.0.1:8000';
     return Scaffold(
       backgroundColor: const Color(0xFFFFF8E1),
       appBar: AppBar(
         title: Text('第${_questionIndex + 1}题 / 共$kQuestionsPerSession题  ·  难度 Lv.$_difficulty'),
         backgroundColor: const Color(0xFFFFAA00),
+        actions: [
+          if (_sessionId != null)
+            Padding(
+              padding: const EdgeInsets.only(right: 12),
+              child: CameraOverlay(
+                sessionId: _sessionId!,
+                backendUrl: backendUrl,
+              ),
+            ),
+        ],
       ),
       body: Column(children: [
         if (_showHint && q != null)
