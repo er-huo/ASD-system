@@ -645,6 +645,177 @@ class _TrainingScreenState extends ConsumerState<TrainingScreen> {
     }
   }
 
+  // ── Social story activity ─────────────────────────────────────────────────────
+
+  static const _scenarioEmoji = {
+    'happy':    ('🎁', Color(0xFFFFF9C4), '小明收到了生日礼物'),
+    'sad':      ('🎈', Color(0xFFE3F2FD), '小明的气球飞走了'),
+    'angry':    ('🧱', Color(0xFFFFEBEE), '小明的积木被推倒了'),
+    'fear':     ('🌑', Color(0xFFEDE7F6), '小明在黑暗中找不到妈妈'),
+    'surprise': ('📦', Color(0xFFE0F7FA), '小明打开了神秘的盒子'),
+    'neutral':  ('📖', Color(0xFFF5F5F5), '小明在安静地看书'),
+    'confused': ('🗺️', Color(0xFFE8EAF6), '小明看着复杂的地图'),
+  };
+
+  Widget _buildSocialScreen() {
+    final q = _currentQuestion!;
+    final emotion = q.emotionTarget;
+    final sceneInfo = _scenarioEmoji[emotion] ??
+        ('😶', const Color(0xFFF5F5F5), q.scenario ?? '小明在经历一些事情');
+    final sceneEmoji = sceneInfo.$1;
+    final sceneBg = sceneInfo.$2;
+    final sceneTxt = q.scenario ?? sceneInfo.$3;
+    final questionText = q.questionText ?? '小明现在是什么心情？';
+    final emotionColor = kEmotionColors[emotion] ?? Colors.orange;
+
+    return Scaffold(
+      backgroundColor: const Color(0xFFFFF8E1),
+      appBar: AppBar(
+        title: Text('第${_questionIndex + 1}题 / 共$kQuestionsPerSession题  ·  社交小剧场'),
+        backgroundColor: const Color(0xFFFFAA00),
+      ),
+      body: Column(children: [
+        // 绘本场景面板
+        Expanded(
+          flex: 5,
+          child: Container(
+            margin: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: sceneBg,
+              borderRadius: BorderRadius.circular(24),
+              border: Border.all(color: emotionColor.withValues(alpha: 0.4), width: 2),
+              boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 12, offset: const Offset(0, 4))],
+            ),
+            child: Row(children: [
+              // 左：场景插图区
+              Expanded(
+                flex: 4,
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                    // 场景大 emoji
+                    Text(sceneEmoji, style: const TextStyle(fontSize: 64)),
+                    const SizedBox(height: 12),
+                    // PCS 情绪脸（模糊处理不剧透答案）
+                    ColorFiltered(
+                      colorFilter: const ColorFilter.matrix([
+                        0.33, 0.33, 0.33, 0, 0,
+                        0.33, 0.33, 0.33, 0, 0,
+                        0.33, 0.33, 0.33, 0, 0,
+                        0, 0, 0, 1, 0,
+                      ]),
+                      child: _StimulusImage(
+                        stimuliPath: 'assets/images/pcs/${emotion}_01.png',
+                        emotionTarget: emotion,
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    const Text('小明', style: TextStyle(fontSize: 14, color: Colors.black54)),
+                  ]),
+                ),
+              ),
+              // 右：场景文字描述（绘本旁白）
+              Expanded(
+                flex: 6,
+                child: Padding(
+                  padding: const EdgeInsets.all(24),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                        decoration: BoxDecoration(
+                          color: emotionColor.withValues(alpha: 0.15),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: const Text('📖 故事', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold)),
+                      ),
+                      const SizedBox(height: 16),
+                      Text(
+                        sceneTxt,
+                        style: const TextStyle(fontSize: 22, height: 1.6, fontWeight: FontWeight.w500),
+                      ),
+                      const SizedBox(height: 20),
+                      // Tino 旁白气泡
+                      Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                        TinoRobot(emotion: _tinoEmotion, robotType: 'tino', size: 60),
+                        const SizedBox(width: 10),
+                        Expanded(
+                          child: Container(
+                            padding: const EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: const BorderRadius.only(
+                                topRight: Radius.circular(16),
+                                bottomLeft: Radius.circular(16),
+                                bottomRight: Radius.circular(16),
+                              ),
+                              border: Border.all(color: Colors.orange.withValues(alpha: 0.4)),
+                            ),
+                            child: Text(
+                              questionText,
+                              style: const TextStyle(fontSize: 16, fontStyle: FontStyle.italic),
+                            ),
+                          ),
+                        ),
+                      ]),
+                    ],
+                  ),
+                ),
+              ),
+            ]),
+          ),
+        ),
+        // 情绪选项按钮区
+        Expanded(
+          flex: 4,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text('  小明现在的心情是：',
+                    style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.black54)),
+                const SizedBox(height: 8),
+                Expanded(
+                  child: GridView.count(
+                    crossAxisCount: q.choices.length <= 3 ? q.choices.length : 4,
+                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10,
+                    childAspectRatio: 1.8,
+                    children: q.choices.map((choice) {
+                      final color = kEmotionColors[choice] ?? Colors.grey;
+                      final emoji = _scenarioEmoji[choice]?.$1 ?? '😶';
+                      final name = _emotionNames[choice] ?? choice;
+                      return GestureDetector(
+                        onTap: _submitting ? null : () => _submitAnswer(choice),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: color.withValues(alpha: 0.1),
+                            borderRadius: BorderRadius.circular(16),
+                            border: Border.all(color: color, width: 2),
+                          ),
+                          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                            Text(emoji, style: const TextStyle(fontSize: 28)),
+                            const SizedBox(height: 4),
+                            Text(name, style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.bold, color: color,
+                            )),
+                          ]),
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ]),
+    );
+  }
+
   Future<void> _endSession() async {
     Map<String, dynamic> summary = {};
     try { summary = await ref.read(apiServiceProvider).endSession(_sessionId!); } catch (_) {}
@@ -668,6 +839,9 @@ class _TrainingScreenState extends ConsumerState<TrainingScreen> {
 
     // FaceBuild activity: assemble face from feature parts
     if (widget.activityType == 'face_build' && _currentQuestion != null) return _buildFaceBuildScreen();
+
+    // Social story activity: storybook scene panel + emotion choices
+    if (widget.activityType == 'social' && _currentQuestion != null) return _buildSocialScreen();
     final q = _currentQuestion;
     return Scaffold(
       backgroundColor: const Color(0xFFFFF8E1),
