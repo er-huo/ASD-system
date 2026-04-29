@@ -32,6 +32,9 @@ class _TrainingScreenState extends ConsumerState<TrainingScreen> {
   bool _submitting = false;
   String? _error;
   String _tinoEmotion = 'happy';
+  // Diary-specific state
+  String? _selectedDiaryEmotion;
+  bool _diarySubmitted = false;
   late DateTime _questionStartTime;
   Timer? _timeoutTimer;
   final _player = AudioPlayer();
@@ -126,6 +129,109 @@ class _TrainingScreenState extends ConsumerState<TrainingScreen> {
     }
   }
 
+  // ── Diary activity ──────────────────────────────────────────────────────────
+
+  Future<void> _selectDiaryEmotion(String emotion) async {
+    if (_diarySubmitted) return;
+    setState(() {
+      _selectedDiaryEmotion = emotion;
+      _tinoEmotion = emotion;
+      _diarySubmitted = true;
+    });
+    await Future.delayed(const Duration(milliseconds: 1800));
+    await _endSession();
+  }
+
+  Widget _buildDiaryScreen() {
+    const emotionLabels = {
+      'happy':    ('😊', '开心'),
+      'sad':      ('😢', '伤心'),
+      'angry':    ('😠', '生气'),
+      'fear':     ('😨', '害怕'),
+      'surprise': ('😮', '惊讶'),
+      'neutral':  ('😐', '平静'),
+      'confused': ('😕', '困惑'),
+    };
+
+    return Scaffold(
+      backgroundColor: const Color(0xFFFFF8E1),
+      appBar: AppBar(
+        title: const Text('心情日记'),
+        backgroundColor: const Color(0xFFFFAA00),
+      ),
+      body: Column(
+        children: [
+          const SizedBox(height: 24),
+          // Tino
+          TinoRobot(emotion: _tinoEmotion, robotType: 'tino', size: 160),
+          const SizedBox(height: 16),
+          // Prompt text
+          AnimatedSwitcher(
+            duration: const Duration(milliseconds: 400),
+            child: Text(
+              _diarySubmitted
+                  ? '谢谢你告诉我 😊'
+                  : '今天你感觉怎么样？',
+              key: ValueKey(_diarySubmitted),
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Color(0xFFE65100)),
+            ),
+          ),
+          const SizedBox(height: 8),
+          if (!_diarySubmitted)
+            const Text('点击你现在的心情', style: TextStyle(fontSize: 16, color: Colors.grey)),
+          const SizedBox(height: 24),
+          // Emotion grid
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 32),
+              child: GridView.count(
+                crossAxisCount: 4,
+                mainAxisSpacing: 16,
+                crossAxisSpacing: 16,
+                shrinkWrap: true,
+                children: kEmotions.map((emotion) {
+                  final label = emotionLabels[emotion];
+                  final isSelected = _selectedDiaryEmotion == emotion;
+                  final color = kEmotionColors[emotion] ?? Colors.grey;
+                  return GestureDetector(
+                    onTap: _diarySubmitted ? null : () => _selectDiaryEmotion(emotion),
+                    child: AnimatedContainer(
+                      duration: const Duration(milliseconds: 300),
+                      decoration: BoxDecoration(
+                        color: isSelected ? color : color.withValues(alpha: 0.15),
+                        border: Border.all(color: color, width: isSelected ? 3 : 1.5),
+                        borderRadius: BorderRadius.circular(20),
+                        boxShadow: isSelected
+                            ? [BoxShadow(color: color.withValues(alpha: 0.4), blurRadius: 12, offset: const Offset(0, 4))]
+                            : [],
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(label?.$1 ?? '', style: const TextStyle(fontSize: 36)),
+                          const SizedBox(height: 6),
+                          Text(
+                            label?.$2 ?? emotion,
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: isSelected ? Colors.white : color,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                }).toList(),
+              ),
+            ),
+          ),
+          const SizedBox(height: 24),
+        ],
+      ),
+    );
+  }
+
   Future<void> _endSession() async {
     Map<String, dynamic> summary = {};
     try { summary = await ref.read(apiServiceProvider).endSession(_sessionId!); } catch (_) {}
@@ -140,6 +246,9 @@ class _TrainingScreenState extends ConsumerState<TrainingScreen> {
   Widget build(BuildContext context) {
     if (_loading) return const Scaffold(body: Center(child: CircularProgressIndicator()));
     if (_error != null) return Scaffold(body: Center(child: Text('错误: $_error')));
+
+    // Diary activity gets its own dedicated UI
+    if (widget.activityType == 'diary') return _buildDiaryScreen();
     final q = _currentQuestion;
     return Scaffold(
       backgroundColor: const Color(0xFFFFF8E1),
