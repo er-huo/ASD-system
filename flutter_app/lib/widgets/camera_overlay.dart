@@ -1,15 +1,14 @@
 // ignore: avoid_web_libraries_in_flutter
-import 'dart:html' as html;
 import 'dart:async';
-import 'dart:typed_data';
+import 'dart:convert';
+import 'dart:typed_data' show Uint8List;
+// ignore: deprecated_member_use
+import 'dart:js' as js;
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:html' as html;
 import 'package:flutter/material.dart';
-import '../services/websocket_service.dart';
 import '../config/constants.dart';
 
-/// Floating badge that streams camera frames to the backend via WebSocket
-/// and shows the detected emotion in real-time.
-///
-/// Does NOT show a video preview — autistic children find it distracting.
 class CameraOverlay extends StatefulWidget {
   final String sessionId;
   final String backendUrl;
@@ -26,14 +25,16 @@ class CameraOverlay extends StatefulWidget {
 
 class _CameraOverlayState extends State<CameraOverlay>
     with SingleTickerProviderStateMixin {
-  final _ws = WebSocketService();
-  html.VideoElement? _video;
-  html.CanvasElement? _canvas;
+
+  html.WebSocket? _ws;
+  Timer? _pollTimer;
   Timer? _captureTimer;
+  Timer? _reconnectTimer;
 
   String? _detectedEmotion;
   double _confidence = 0.0;
   bool _cameraActive = false;
+  bool _wsConnected = false;
   bool _permissionDenied = false;
 
   late AnimationController _pulseCtrl;
@@ -44,6 +45,12 @@ class _CameraOverlayState extends State<CameraOverlay>
     'fear': '😨', 'surprise': '😮', 'neutral': '😐', 'confused': '😕',
   };
 
+  String get _wsUrl =>
+      widget.backendUrl
+          .replaceFirst('https://', 'wss://')
+          .replaceFirst('http://', 'ws://') +
+      '/emotion/stream/${widget.sessionId}';
+
   @override
   void initState() {
     super.initState();
@@ -51,82 +58,84 @@ class _CameraOverlayState extends State<CameraOverlay>
       vsync: this, duration: const Duration(seconds: 2),
     )..repeat(reverse: true);
     _pulse = Tween(begin: 0.6, end: 1.0).animate(_pulseCtrl);
+    _connectWs();
     _startCamera();
   }
 
-  Future<void> _startCamera() async {
-    // Connect WebSocket first (non-blocking)
-    final wsUrl = widget.backendUrl
-        .replaceFirst('https://', 'wss://')
-        .replaceFirst('http://', 'ws://') +
-        '/emotion/stream/${widget.sessionId}';
-    try {
-      _ws.connect(wsUrl);
-      _ws.emotionStream.listen((frame) {
-        if (!mounted) return;
-        if (frame.emotion != null) {
-          setState(() {
-            _detectedEmotion = frame.emotion;
-            _confidence = frame.confidence;
-          });
+  void _connectWs() {
+    _ws?.close();
+    _ws = html.WebSocket(_wsUrl);
+    _ws!.onOpen.listen((_) {
+      if (mounted) setState(() => _wsConnected = true);
+    });
+    _ws!.onMessage.listen((event) {
+      try {
+        final data = jsonDecode(event.data as String) as Map<String, dynamic>;
+        final emotion = data['emotion'] as String?;
+        final conf = (data['confidence'] as num?)?.toDouble() ?? 0.0;
+        if (mounted && emotion != null) {
+          setState(() { _detectedEmotion = emotion; _confidence = conf; });
         }
+      } catch (_) {}
+    });
+    _ws!.onClose.listen((_) {
+      if (mounted) setState(() => _wsConnected = false);
+      _reconnectTimer?.cancel();
+      _reconnectTimer = Timer(const Duration(seconds: 2), () {
+        if (mounted) _connectWs();
       });
-    } catch (_) {}
-
-    // Request camera permission
-    try {
-      final stream = await html.window.navigator.mediaDevices
-          ?.getUserMedia({'video': {'facingMode': 'user'}, 'audio': false});
-      if (stream == null) {
-        if (mounted) setState(() => _permissionDenied = true);
-        return;
-      }
-      _video = html.VideoElement()
-        ..autoplay = true
-        ..muted = true
-        ..srcObject = stream;
-      _canvas = html.CanvasElement(width: 160, height: 120);
-
-      // Wait for video to be ready
-      await _video!.onLoadedMetadata.first;
-
-      if (mounted) setState(() => _cameraActive = true);
-
-      // Capture frame every 600ms
-      _captureTimer = Timer.periodic(
-          const Duration(milliseconds: 600), (_) => _captureAndSend());
-    } on html.DomException {
-      if (mounted) setState(() => _permissionDenied = true);
-    } catch (_) {
-      if (mounted) setState(() => _permissionDenied = true);
-    }
+    });
+    _ws!.onError.listen((_) {
+      if (mounted) setState(() => _wsConnected = false);
+    });
   }
 
-  void _captureAndSend() {
-    if (_video == null || _canvas == null) return;
+  void _startCamera() {
+    // Tell JS to start camera entirely in JS — no Dart/JS stream passing
+    js.context.callMethod('asdStart', []);
+
+    // Poll until JS reports camera ready or denied
+    _pollTimer = Timer.periodic(const Duration(milliseconds: 300), (t) {
+      if (!mounted) { t.cancel(); return; }
+      final denied = js.context.callMethod('asdIsDenied', []) as bool;
+      final ready  = js.context.callMethod('asdIsReady',  []) as bool;
+      if (denied) {
+        t.cancel();
+        setState(() => _permissionDenied = true);
+      } else if (ready) {
+        t.cancel();
+        setState(() => _cameraActive = true);
+        _captureLoop();
+      }
+    });
+  }
+
+  void _captureLoop() {
+    _captureTimer = Timer(const Duration(milliseconds: 800), () {
+      if (!mounted) return;
+      _sendFrame();
+      if (mounted) _captureLoop();
+    });
+  }
+
+  void _sendFrame() {
+    if (_ws?.readyState != html.WebSocket.OPEN) return;
     try {
-      _canvas!.context2D.drawImageScaled(_video!, 0, 0, 160, 120);
-      _canvas!.toBlob('image/jpeg', 0.65).then((blob) {
-        final reader = html.FileReader();
-        reader.readAsArrayBuffer(blob);
-        reader.onLoad.listen((_) {
-          final result = reader.result;
-          if (result is List<int>) {
-            _ws.sendFrame(Uint8List.fromList(result));
-          } else if (result is ByteBuffer) {
-            _ws.sendFrame(result.asUint8List());
-          }
-        });
-      });
+      final url = js.context.callMethod('asdGetFrame', []) as String;
+      if (url.length < 3000) return;
+      final base64 = url.substring(url.indexOf(',') + 1);
+      _ws!.sendTypedData(Uint8List.fromList(base64Decode(base64)));
     } catch (_) {}
   }
 
   @override
   void dispose() {
+    _pollTimer?.cancel();
     _captureTimer?.cancel();
+    _reconnectTimer?.cancel();
     _pulseCtrl.dispose();
-    _video?.srcObject?.getTracks().forEach((t) => t.stop());
-    _ws.dispose();
+    _ws?.close();
+    js.context.callMethod('asdStop', []);
     super.dispose();
   }
 
@@ -135,7 +144,7 @@ class _CameraOverlayState extends State<CameraOverlay>
     final emotion = _detectedEmotion;
     final color = emotion != null
         ? (kEmotionColors[emotion] ?? Colors.blueGrey)
-        : Colors.blueGrey;
+        : (_wsConnected ? Colors.green : Colors.blueGrey);
     final emoji = emotion != null ? (_emojiMap[emotion] ?? '😶') : null;
 
     return Container(
@@ -144,47 +153,38 @@ class _CameraOverlayState extends State<CameraOverlay>
         color: Colors.black.withValues(alpha: 0.72),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: _cameraActive ? color.withValues(alpha: 0.8) : Colors.grey,
+          color: _wsConnected ? color.withValues(alpha: 0.8) : Colors.grey,
           width: 1.5,
         ),
       ),
       child: Row(mainAxisSize: MainAxisSize.min, children: [
-        // Camera status dot
         if (_permissionDenied)
           const Icon(Icons.videocam_off, color: Colors.red, size: 16)
-        else if (!_cameraActive)
-          AnimatedBuilder(
-            animation: _pulse,
-            builder: (_, __) => Opacity(
-              opacity: _pulse.value,
-              child: const Icon(Icons.videocam, color: Colors.grey, size: 16),
-            ),
-          )
         else
           AnimatedBuilder(
             animation: _pulse,
             builder: (_, __) => Opacity(
-              opacity: _pulse.value,
-              child: Icon(Icons.videocam, color: color, size: 16),
+              opacity: _cameraActive ? _pulse.value : 0.4,
+              child: Icon(
+                _cameraActive ? Icons.videocam : Icons.videocam_outlined,
+                color: _wsConnected ? Colors.greenAccent : Colors.grey,
+                size: 16,
+              ),
             ),
           ),
         const SizedBox(width: 6),
-        // Emotion result
         if (_permissionDenied)
           const Text('摄像头未授权',
               style: TextStyle(color: Colors.red, fontSize: 11))
         else if (emoji != null) ...[
           Text(emoji, style: const TextStyle(fontSize: 16)),
           const SizedBox(width: 4),
-          Text(
-            '${((_confidence) * 100).toStringAsFixed(0)}%',
-            style: TextStyle(
-              color: color, fontSize: 11, fontWeight: FontWeight.bold,
-            ),
-          ),
+          Text('${(_confidence * 100).toStringAsFixed(0)}%',
+              style: TextStyle(
+                  color: color, fontSize: 11, fontWeight: FontWeight.bold)),
         ] else
-          const Text('AI识别中…',
-              style: TextStyle(color: Colors.white54, fontSize: 11)),
+          Text(_wsConnected ? '识别中…' : 'AI连接中…',
+              style: const TextStyle(color: Colors.white54, fontSize: 11)),
       ]),
     );
   }

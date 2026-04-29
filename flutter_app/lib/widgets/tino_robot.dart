@@ -27,32 +27,34 @@ class TinoRobot extends StatelessWidget {
 
     return SizedBox(
       width: size, height: size,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(width: 4, height: size * 0.08, color: color.withValues(alpha: 0.7)),
-          Container(width: size * 0.06, height: size * 0.06,
-              decoration: BoxDecoration(color: const Color(0xFFFFCC02), shape: BoxShape.circle,
-                  boxShadow: [BoxShadow(color: const Color(0xFFFFCC02).withValues(alpha: 0.8), blurRadius: 6)])),
-          const SizedBox(height: 2),
-          Container(
-            key: const Key('tino_head'),
-            width: headSize, height: headSize,
-            decoration: BoxDecoration(
-              color: color, shape: BoxShape.circle,
-              boxShadow: [BoxShadow(color: color.withValues(alpha: 0.4), blurRadius: 10, offset: const Offset(0, 4))],
+      child: ClipRect(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(width: 4, height: size * 0.08, color: color.withValues(alpha: 0.7)),
+            Container(width: size * 0.06, height: size * 0.06,
+                decoration: BoxDecoration(color: const Color(0xFFFFCC02), shape: BoxShape.circle,
+                    boxShadow: [BoxShadow(color: const Color(0xFFFFCC02).withValues(alpha: 0.8), blurRadius: 6)])),
+            const SizedBox(height: 2),
+            Container(
+              key: const Key('tino_head'),
+              width: headSize, height: headSize,
+              decoration: BoxDecoration(
+                color: color, shape: BoxShape.circle,
+                boxShadow: [BoxShadow(color: color.withValues(alpha: 0.4), blurRadius: 10, offset: const Offset(0, 4))],
+              ),
+              child: _buildFace(),
             ),
-            child: _buildFace(),
-          ),
-          AnimatedContainer(
-            duration: const Duration(milliseconds: 400),
-            width: bodyW, height: bodyH,
-            decoration: BoxDecoration(
-              color: color, borderRadius: BorderRadius.circular(bodyW * 0.2),
-              boxShadow: [BoxShadow(color: color.withValues(alpha: 0.3), blurRadius: 8, offset: const Offset(0, 4))],
+            AnimatedContainer(
+              duration: const Duration(milliseconds: 400),
+              width: bodyW, height: bodyH,
+              decoration: BoxDecoration(
+                color: color, borderRadius: BorderRadius.circular(bodyW * 0.2),
+                boxShadow: [BoxShadow(color: color.withValues(alpha: 0.3), blurRadius: 8, offset: const Offset(0, 4))],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

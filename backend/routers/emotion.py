@@ -17,7 +17,10 @@ async def emotion_stream(websocket: WebSocket, session_id: str):
     try:
         while True:
             jpeg_bytes = await websocket.receive_bytes()
+            print(f"[frame] {len(jpeg_bytes)}B", flush=True)
             face_result = service.process(jpeg_bytes)
+            if face_result:
+                print(f"[DeepFace] {face_result['emotion']} {face_result['confidence']:.0%}", flush=True)
             fused = fuse_emotions(face=face_result, voice=None, heart=None)
             payload = fused.copy() if fused else {"emotion": None, "confidence": 0.0}
             payload["source"] = "fused" if fused else "none"

@@ -28,13 +28,14 @@ class EmotionService:
         try:
             arr = np.frombuffer(jpeg_bytes, np.uint8)
             img = cv2.imdecode(arr, cv2.IMREAD_COLOR)
-            results = DeepFace.analyze(img, actions=["emotion"], enforce_detection=True, silent=True)
+            results = DeepFace.analyze(img, actions=["emotion"], enforce_detection=False, silent=True)
             raw = results[0]["emotion"]
             total = sum(raw.values()) or 1.0
             dominant = max(raw, key=raw.get)
             mapped = EMOTION_MAP.get(dominant, "neutral")
-            return {"emotion": mapped, "confidence": round(raw[dominant] / total, 3)}
-        except Exception:
+            return {"emotion": mapped, "confidence": float(round(raw[dominant] / total, 3))}
+        except Exception as e:
+            print(f"[DeepFace ERR] {type(e).__name__}: {e}", flush=True)
             return None
 
     def _push_frame(self, result: dict):
