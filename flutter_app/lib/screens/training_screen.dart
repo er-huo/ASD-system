@@ -271,9 +271,7 @@ class _TrainingScreenState extends ConsumerState<TrainingScreen> {
               if (q != null) ...[
                 Text(q.questionText ?? 'Tino现在是什么心情？',
                     style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
-                Container(width: 160, height: 160,
-                    decoration: BoxDecoration(color: Colors.grey.shade200, borderRadius: BorderRadius.circular(16)),
-                    child: const Icon(Icons.face, size: 80, color: Colors.grey)),
+                _StimulusImage(stimuliPath: q.stimuliPath, emotionTarget: q.emotionTarget),
                 Wrap(spacing: 12, runSpacing: 12, alignment: WrapAlignment.center,
                     children: q.choices.asMap().entries.map((e) {
                       return EmotionButton(emotion: e.value, selected: _selectedChoice == e.key,
@@ -293,6 +291,47 @@ class _TrainingScreenState extends ConsumerState<TrainingScreen> {
           ])),
         ])),
       ]),
+    );
+  }
+}
+
+// ── 刺激材料展示组件 ────────────────────────────────────────────────────────
+// 优先加载 asset 图片，失败时回退到情绪 emoji 大图
+class _StimulusImage extends StatelessWidget {
+  final String stimuliPath;
+  final String emotionTarget;
+
+  const _StimulusImage({required this.stimuliPath, required this.emotionTarget});
+
+  static const _emoji = {
+    'happy':    '😊', 'sad':      '😢', 'angry':    '😠',
+    'fear':     '😨', 'surprise': '😮', 'neutral':  '😐', 'confused': '😕',
+  };
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 180,
+      height: 180,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.1), blurRadius: 10, offset: const Offset(0, 4))],
+      ),
+      clipBehavior: Clip.hardEdge,
+      child: Image.asset(
+        stimuliPath,
+        fit: BoxFit.contain,
+        errorBuilder: (_, __, ___) {
+          // 图片加载失败时显示大 emoji
+          return Center(
+            child: Text(
+              _emoji[emotionTarget] ?? '🙂',
+              style: const TextStyle(fontSize: 100),
+            ),
+          );
+        },
+      ),
     );
   }
 }
