@@ -19,7 +19,17 @@ def test_get_next_question_avoids_seen():
         seen.add(q["id"])
     assert len(set(questions)) == 4
 
-def test_get_next_question_returns_none_when_pool_exhausted():
+def test_get_next_question_falls_back_to_other_emotions_when_target_pool_exhausted():
     seen = {q["id"] for q in loader.index["detective"].get((1, "happy"), [])}
     result = loader.get_next_question("detective", difficulty=1, seen_ids=seen, emotion_target="happy")
-    assert result is None or result["emotion_target"] == "happy"
+    assert result is not None
+    assert result["difficulty_level"] == 1
+    assert result["id"] not in seen
+
+def test_get_next_question_returns_none_when_all_questions_for_difficulty_are_seen():
+    seen = set()
+    for (_difficulty, _emotion), qs in loader.index["detective"].items():
+        if _difficulty == 1:
+            seen.update(q["id"] for q in qs)
+    result = loader.get_next_question("detective", difficulty=1, seen_ids=seen, emotion_target="happy")
+    assert result is None

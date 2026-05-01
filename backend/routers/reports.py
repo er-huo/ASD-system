@@ -19,7 +19,7 @@ def get_session_emotions(session_id: str, db: Session = Depends(get_db)):
     """Return emotion logs for a session, for the trend chart."""
     logs = (db.query(models.EmotionLog)
             .filter(models.EmotionLog.session_id == session_id)
-            .order_by(models.EmotionLog.logged_at)
+            .order_by(models.EmotionLog.timestamp)
             .all())
     return [{"emotion": l.emotion, "confidence": float(l.confidence),
-             "logged_at": l.logged_at.isoformat()} for l in logs]
+             "logged_at": l.timestamp.isoformat()} for l in logs]

@@ -28,7 +28,7 @@ async def emotion_stream(websocket: WebSocket, session_id: str):
                 _session_state[session_id]["fused_emotion"] = fused["emotion"]
                 _session_state[session_id]["fused_confidence"] = fused["confidence"]
             now = datetime.utcnow()
-            if fused and (now - last_log_time).total_seconds() >= 5:
+            if fused and (now - last_log_time).total_seconds() >= 2:
                 db = SessionLocal()
                 try:
                     data_service.create_emotion_log(db, session_id=session_id,

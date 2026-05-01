@@ -34,4 +34,6 @@ flutter:
     - assets/audio/
     - assets/images/pcs/
     - assets/images/photos/
+    - assets/images/ui/
+    - assets/images/activities/
     - assets/videos/
