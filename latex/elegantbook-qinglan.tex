@@ -20,6 +20,7 @@
   headsep=4mm,
   footskip=10mm
 }
+\usepackage[absolute,overlay]{textpos}
 
 \input{showcase-common.tex}
 
@@ -45,6 +46,9 @@
 
 \clearpage
 \thispagestyle{empty}
+\begin{textblock*}{24mm}(\dimexpr\paperwidth-50mm\relax,18mm)
+  \includegraphics[width=24mm]{assets/cover.png}
+\end{textblock*}
 \begin{center}
 \vspace*{2.3cm}
 {\Huge\color{structurecolor}\textbf{读懂沉默，回应星光}}

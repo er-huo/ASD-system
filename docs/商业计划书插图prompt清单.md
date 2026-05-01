@@ -72,15 +72,23 @@ warm explanatory infographic for an autism-support business plan, showing a gent
 
 ### 6. 试点流程图
 
-对应位置：第六章《实施计划与试点安排》
+对应位置：第六章《商业落地与实施路径》
 
 ```text
 warm roadmap illustration for an autism-support business plan, four-stage pilot flow: scenario onboarding, guided use, training sessions, review and feedback, icons of child, parent, therapist and dashboard, handbook-like layout, low-stimulation educational illustration, steady and reliable feeling, warm forest palette, clear sequence, no aggressive startup style
 ```
 
-### 7. 团队协作图
+### 7. 技术亮点逻辑图
 
-对应位置：第十章《团队力量与未来展望》
+对应位置：第五章《技术亮点与核心支撑》
+
+```text
+warm explanatory infographic for an autism-support business plan, a gentle technical support loop showing mastery tracking, emotion-state observation, rule-based adaptive hinting, difficulty adjustment, session summary and therapist review, soft circular or flowing structure, forest palette, warm beige, sage green and soft amber, child-centered and respectful, subtle data markers, clear but not cold, no futuristic HUD, no hard-edged engineering blueprint
+```
+
+### 8. 团队协作图
+
+对应位置：第八章《团队力量与未来展望》
 
 ```text
 supportive collaboration illustration for an autism-support business plan, a calm network showing product planning, frontend experience, backend and data, content and field testing, plus external therapists and partner institutions, a softly glowing central StarTalk symbol, rounded relationship map, warm and trustworthy tone, like the final page of a caring project handbook, clean and stable composition
