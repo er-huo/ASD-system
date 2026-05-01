@@ -21,3 +21,12 @@ flutter_app/.packages
 # OS
 .DS_Store
 Thumbs.db
+
+# LaTeX build artifacts
+latex/*.aux
+latex/*.bcf
+latex/*.log
+latex/*.out
+latex/*.run.xml
+latex/*.toc
+latex/*.synctex.gz

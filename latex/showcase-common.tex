@@ -1,0 +1,26 @@
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{xcolor}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{hyperref}
+
+\setlist[itemize]{itemsep=0.3em, topsep=0.5em, leftmargin=2em}
+\setlist[enumerate]{itemsep=0.3em, topsep=0.5em, leftmargin=2em}
+
+\newcommand{\PlaceholderFigure}[2]{%
+  \begin{figure}[H]
+    \centering
+    \fbox{%
+      \begin{minipage}[c][0.28\textheight][c]{0.82\textwidth}
+        \centering
+        \textbf{#1}\\[0.8em]
+        \small #2
+      \end{minipage}%
+    }
+  \end{figure}
+}

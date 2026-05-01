@@ -1,0 +1,80 @@
+\documentclass[lang=cn,12pt,scheme=chinese,blue,oneside]{elegantbook}
+
+\usepackage{xeCJK}
+\setCJKmainfont{SimSun}
+\setCJKsansfont{SimSun}
+\setCJKmonofont{SimSun}
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+
+\renewcommand{\baselinestretch}{1.35}
+
+\usepackage{geometry}
+\geometry{
+  a4paper,
+  left=24mm,
+  right=24mm,
+  top=24mm,
+  bottom=24mm,
+  headheight=2.1cm,
+  headsep=4mm,
+  footskip=10mm
+}
+
+\input{showcase-common.tex}
+
+\title{星语灵境}
+\subtitle{面向 ASD 儿童的情绪训练与社交干预系统商业计划书}
+\author{星语灵境项目组}
+\institute{挑战杯参赛方案}
+\date{2026年5月}
+\version{feature/profile-edit 分支修订版}
+\bioinfo{项目类型}{科技向善·特殊儿童教育支持}
+
+\definecolor{structurecolor}{RGB}{212,154,58}
+\definecolor{main}{RGB}{212,154,58}
+\definecolor{second}{RGB}{44,62,80}
+\definecolor{third}{RGB}{244,238,221}
+\colorlet{coverlinecolor}{second}
+
+\setcounter{tocdepth}{2}
+
+\begin{document}
+\frontmatter
+\maketitle
+
+\clearpage
+\thispagestyle{empty}
+\begin{center}
+\vspace*{2.3cm}
+{\Huge\color{structurecolor}\textbf{读懂沉默，回应星光}}
+
+\vspace{1.1cm}
+\begin{minipage}{0.84\textwidth}
+\begin{center}
+\large
+\centering
+{\kaishu 我们不把它定义为一个冷冰冰的训练工具，}\\[0.35em]
+{\kaishu 而是定义为一个能陪孩子慢慢练习社交表达的数字伙伴。}
+
+\vspace{0.8cm}
+面向自闭症谱系障碍（ASD）儿童，\\
+围绕情绪识别、互动训练、过程记录与反馈评估，\\
+构建一套\textbf{可演示、可落地、可扩展}的训练系统原型。
+\end{center}
+\end{minipage}
+
+\vfill
+\PlaceholderFigure
+  {封面插图占位}
+  {建议后续替换为封面主视觉插图。}
+\vfill
+\end{center}
+\clearpage
+
+\tableofcontents
+\mainmatter
+
+\input{showcase-body.tex}
+
+\end{document}
