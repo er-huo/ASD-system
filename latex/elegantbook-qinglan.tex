@@ -40,13 +40,26 @@
 
 \setcounter{tocdepth}{2}
 
+\makeatletter
+\fancyhead[L]{\ProjectHeaderBrand}
+\fancyhead[R]{\color{structurecolor}\cnormal\rightmark}
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[c]{\color{structurecolor}\small\thepage}
+  \fancyhead[L]{\ProjectHeaderBrand}
+  \fancyhead[R]{\color{structurecolor}\cnormal\rightmark}
+  \renewcommand{\headrulewidth}{1pt}
+  \renewcommand{\headrule}{\color{structurecolor}\hrule width\textwidth}
+}
+\makeatother
+
 \begin{document}
 \frontmatter
 \maketitle
 
 \clearpage
 \thispagestyle{empty}
-\begin{textblock*}{24mm}(\dimexpr\paperwidth-50mm\relax,18mm)
+\begin{textblock*}{34mm}(\dimexpr\paperwidth-58mm\relax,18mm)
   \includegraphics[width=24mm]{assets/cover.png}
 \end{textblock*}
 \begin{center}
@@ -69,9 +82,7 @@
 \end{minipage}
 
 \vfill
-\PlaceholderFigure
-  {封面插图占位}
-  {建议后续替换为封面主视觉插图。}
+\includegraphics[width=0.84\textwidth]{assets/cover-illustration.png}
 \vfill
 \end{center}
 \clearpage

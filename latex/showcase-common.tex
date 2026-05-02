@@ -11,6 +11,7 @@
 
 \setlist[itemize]{itemsep=0.3em, topsep=0.5em, leftmargin=2em}
 \setlist[enumerate]{itemsep=0.3em, topsep=0.5em, leftmargin=2em}
+\captionsetup[figure]{font=small, labelfont=bf, justification=centering, skip=6pt}
 
 \newcommand{\PlaceholderFigure}[2]{%
   \begin{figure}[H]
@@ -22,5 +23,208 @@
         \small #2
       \end{minipage}%
     }
+  \end{figure}
+}
+
+\newcommand{\CaptionedPlaceholderFigure}[3]{%
+  \begin{figure}[H]
+    \centering
+    \fbox{%
+      \begin{minipage}[c][0.24\textheight][c]{0.84\textwidth}
+        \centering
+        \textbf{#1}\\[0.8em]
+        \small #2
+      \end{minipage}%
+    }
+    \caption{#3}
+  \end{figure}
+}
+
+\newcommand{\PlanImage}[3][0.94\textwidth]{%
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=#1]{#2}
+    \caption{#3}
+  \end{figure}
+}
+
+\newcommand{\PlanSlogan}[1]{%
+  \begin{center}
+    \begin{tcolorbox}[
+      width=0.86\textwidth,
+      colback=third!88!white,
+      colframe=structurecolor,
+      boxrule=0.9pt,
+      arc=2mm,
+      left=10pt,
+      right=10pt,
+      top=8pt,
+      bottom=8pt
+    ]
+      \centering
+      {\Large\bfseries\color{structurecolor} #1}
+    \end{tcolorbox}
+  \end{center}
+}
+
+\newcommand{\ProjectHeaderBrand}{%
+  \raisebox{-0.28\height}{\includegraphics[height=8.5mm]{assets/cover.png}}%
+  \hspace{0.55em}%
+  {\color{structurecolor}\small\kaishu 读懂沉默，回应星光}%
+}
+
+\definecolor{PlanLine}{HTML}{7A695B}
+\definecolor{PlanLayerA}{HTML}{F5EBDD}
+\definecolor{PlanLayerB}{HTML}{E7F0E3}
+\definecolor{PlanLayerC}{HTML}{E7EEF5}
+\definecolor{PlanLayerD}{HTML}{FBF0D7}
+\definecolor{PlanLayerE}{HTML}{E8F1EE}
+
+\newcommand{\FiveLayerArchitectureFigure}{%
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[font=\small, node distance=0.22cm]
+      \node[draw=PlanLine, fill=PlanLayerA, rounded corners=8pt, line width=0.8pt,
+        minimum width=0.9\textwidth, text width=0.84\textwidth, align=left,
+        inner xsep=12pt, inner ysep=9pt] (layer1)
+        {\textbf{感知层}\hspace{0.8em}摄像头采集儿童面部画面并形成实时情绪识别结果，语音与生理信号作为后续扩展接口保留。};
+
+      \node[draw=PlanLine, fill=PlanLayerB, rounded corners=8pt, line width=0.8pt,
+        minimum width=0.9\textwidth, text width=0.84\textwidth, align=left,
+        inner xsep=12pt, inner ysep=9pt, below=of layer1] (layer2)
+        {\textbf{决策层}\hspace{0.8em}后台结合 BKT 掌握度、最近作答表现、反应时长和当前情绪状态，决定提示、降难、升难或切换节奏。};
+
+      \node[draw=PlanLine, fill=PlanLayerC, rounded corners=8pt, line width=0.8pt,
+        minimum width=0.9\textwidth, text width=0.84\textwidth, align=left,
+        inner xsep=12pt, inner ysep=9pt, below=of layer2] (layer3)
+        {\textbf{内容层}\hspace{0.8em}五类训练活动与题库按情绪类别和三级难度组织，保证训练既有针对性，也有逐步递进的练习路径。};
+
+      \node[draw=PlanLine, fill=PlanLayerD, rounded corners=8pt, line width=0.8pt,
+        minimum width=0.9\textwidth, text width=0.84\textwidth, align=left,
+        inner xsep=12pt, inner ysep=9pt, below=of layer3] (layer4)
+        {\textbf{反馈层}\hspace{0.8em}情绪音频、机器人颜色与动作、提示卡片和节奏调整协同输出，让系统回应更温和也更容易被孩子理解。};
+
+      \node[draw=PlanLine, fill=PlanLayerE, rounded corners=8pt, line width=0.8pt,
+        minimum width=0.9\textwidth, text width=0.84\textwidth, align=left,
+        inner xsep=12pt, inner ysep=9pt, below=of layer4] (layer5)
+        {\textbf{数据层}\hspace{0.8em}会话记录、情绪日志、训练总结与看板数据持续沉淀，用于家长沟通、治疗师复盘和后续迭代。};
+
+      \draw[->, very thick, PlanLine] (layer1.south) -- (layer2.north);
+      \draw[->, very thick, PlanLine] (layer2.south) -- (layer3.north);
+      \draw[->, very thick, PlanLine] (layer3.south) -- (layer4.north);
+      \draw[->, very thick, PlanLine] (layer4.south) -- (layer5.north);
+    \end{tikzpicture}
+    \caption{图4-1 星语灵境五层系统框架}
+  \end{figure}
+}
+
+\newcommand{\AdaptiveMechanismFigure}{%
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[font=\small,
+      mechsource/.style={draw=PlanLine, fill=PlanLayerA, rounded corners=8pt,
+        line width=0.8pt, minimum width=3.15cm, text width=2.82cm,
+        minimum height=1.55cm, align=center, inner sep=6pt},
+      mechcore/.style={draw=PlanLine, fill=PlanLayerC, rounded corners=10pt,
+        line width=0.9pt, minimum width=4.5cm, text width=4.05cm,
+        minimum height=1.9cm, align=center, inner sep=8pt},
+      mechaction/.style={draw=PlanLine, fill=PlanLayerD, rounded corners=8pt,
+        line width=0.8pt, minimum width=3.0cm, text width=2.62cm,
+        minimum height=1.55cm, align=center, inner sep=6pt}]
+      \node[mechsource] (bkt) at (-5.6,1.9) {\textbf{BKT 掌握度}\\识别当前较弱情绪};
+      \node[mechsource] (recent) at (-1.9,1.9) {\textbf{最近作答}\\判断是否稳定完成};
+      \node[mechsource] (time) at (1.9,1.9) {\textbf{反应时长}\\识别卡顿或过快作答};
+      \node[mechsource] (emotion) at (5.6,1.9) {\textbf{摄像头情绪流}\\补上当下困惑或紧张状态};
+
+      \node[mechcore] (engine) at (0,0) {\textbf{规则引擎}\\综合判断是继续、提示、调难，还是切换到新的训练节奏};
+
+      \node[mechaction] (hint) at (-5.4,-2.0) {\textbf{提示 hint}\\先帮助孩子看见关键线索};
+      \node[mechaction] (reduce) at (-1.8,-2.0) {\textbf{降难 reduce}\\避免连续挫败带来的压力};
+      \node[mechaction] (raise) at (1.8,-2.0) {\textbf{升难 raise}\\保持适度挑战与投入感};
+      \node[mechaction] (scene) at (5.4,-2.0) {\textbf{切换场景}\\避免机械重复和注意力流失};
+
+      \draw[->, very thick, PlanLine] (bkt.south) -- (engine.north west);
+      \draw[->, very thick, PlanLine] (recent.south) -- (engine.north);
+      \draw[->, very thick, PlanLine] (time.south) -- (engine.north);
+      \draw[->, very thick, PlanLine] (emotion.south) -- (engine.north east);
+
+      \draw[->, very thick, PlanLine] (engine.south west) -- (hint.north);
+      \draw[->, very thick, PlanLine] (engine.south west) -- (reduce.north);
+      \draw[->, very thick, PlanLine] (engine.south east) -- (raise.north);
+      \draw[->, very thick, PlanLine] (engine.south east) -- (scene.north);
+    \end{tikzpicture}
+    \caption{图5-1 自适应训练机制图}
+  \end{figure}
+}
+
+\newcommand{\FeedbackLinkageFigure}{%
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[font=\small,
+      trigger/.style={draw=PlanLine, fill=PlanLayerA, rounded corners=8pt,
+        line width=0.8pt, minimum width=3.35cm, text width=3.0cm,
+        minimum height=1.5cm, align=center, inner sep=6pt},
+      hub/.style={draw=PlanLine, fill=PlanLayerB, rounded corners=10pt,
+        line width=0.9pt, minimum width=4.8cm, text width=4.2cm,
+        minimum height=1.9cm, align=center, inner sep=8pt},
+      output/.style={draw=PlanLine, fill=PlanLayerD, rounded corners=8pt,
+        line width=0.8pt, minimum width=3.0cm, text width=2.62cm,
+        minimum height=1.45cm, align=center, inner sep=6pt}]
+      \node[trigger] (correct) at (-4.2,1.9) {\textbf{答对}\\播放对应情绪音频并切换伙伴表情};
+      \node[trigger] (wrong) at (0,1.9) {\textbf{答错}\\给出温和提醒，不做强刺激惩罚};
+      \node[trigger] (confused) at (4.2,1.9) {\textbf{困惑}\\根据规则返回 hint 并展开提示卡片};
+
+      \node[hub] (hub) at (0,0) {\textbf{反馈编排}\\把音频、颜色、动作和提示组织成一致、可预期的陪伴式回应};
+
+      \node[output] (audio) at (-5.6,-2.0) {\textbf{情绪音频}\\让反馈先被听见};
+      \node[output] (robot) at (-1.9,-2.0) {\textbf{机器人颜色与动作}\\让回应被清楚看见};
+      \node[output] (hint) at (1.9,-2.0) {\textbf{提示卡片}\\把注意力拉回关键表情线索};
+      \node[output] (layout) at (5.6,-2.0) {\textbf{固定布局与低刺激节奏}\\降低因界面变化带来的额外负担};
+
+      \draw[->, very thick, PlanLine] (correct.south) -- (hub.north west);
+      \draw[->, very thick, PlanLine] (wrong.south) -- (hub.north);
+      \draw[->, very thick, PlanLine] (confused.south) -- (hub.north east);
+
+      \draw[->, very thick, PlanLine] (hub.south west) -- (audio.north);
+      \draw[->, very thick, PlanLine] (hub.south west) -- (robot.north);
+      \draw[->, very thick, PlanLine] (hub.south east) -- (hint.north);
+      \draw[->, very thick, PlanLine] (hub.south east) -- (layout.north);
+    \end{tikzpicture}
+    \caption{图5-2 温和反馈联动图}
+  \end{figure}
+}
+
+\newcommand{\TrainingDataLoopFigure}{%
+  \begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[font=\small,
+      loopa/.style={draw=PlanLine, fill=PlanLayerA, rounded corners=8pt,
+        line width=0.8pt, minimum width=2.95cm, text width=2.62cm,
+        minimum height=1.55cm, align=center, inner sep=6pt},
+      loopb/.style={draw=PlanLine, fill=PlanLayerB, rounded corners=8pt,
+        line width=0.8pt, minimum width=2.95cm, text width=2.62cm,
+        minimum height=1.55cm, align=center, inner sep=6pt},
+      loopc/.style={draw=PlanLine, fill=PlanLayerC, rounded corners=8pt,
+        line width=0.8pt, minimum width=2.95cm, text width=2.62cm,
+        minimum height=1.55cm, align=center, inner sep=6pt},
+      loopd/.style={draw=PlanLine, fill=PlanLayerD, rounded corners=8pt,
+        line width=0.8pt, minimum width=2.95cm, text width=2.62cm,
+        minimum height=1.55cm, align=center, inner sep=6pt},
+      loope/.style={draw=PlanLine, fill=PlanLayerE, rounded corners=8pt,
+        line width=0.8pt, minimum width=2.95cm, text width=2.62cm,
+        minimum height=1.55cm, align=center, inner sep=6pt}]
+      \node[loopa] (train) at (-6.2,0) {\textbf{儿童端训练}\\作答、反应时长、提示情况};
+      \node[loopb] (session) at (-3.1,0) {\textbf{会话记录}\\按题写入训练结果};
+      \node[loopc] (emotion) at (0,0) {\textbf{情绪日志与 BKT}\\持续记录状态并更新掌握度};
+      \node[loopd] (report) at (3.1,0) {\textbf{总结页与看板}\\组织成家长和治疗师可读的信息};
+      \node[loope] (next) at (6.2,0) {\textbf{下一轮训练重点}\\把弱项和节奏重新带回训练};
+
+      \draw[->, very thick, PlanLine] (train.east) -- (session.west);
+      \draw[->, very thick, PlanLine] (session.east) -- (emotion.west);
+      \draw[->, very thick, PlanLine] (emotion.east) -- (report.west);
+      \draw[->, very thick, PlanLine] (report.east) -- (next.west);
+      \draw[->, very thick, PlanLine] (next.south west) .. controls (3.2,-2.2) and (-3.2,-2.2) .. (train.south east);
+    \end{tikzpicture}
+    \caption{图5-3 训练数据闭环图}
   \end{figure}
 }
