@@ -9,7 +9,6 @@
 \usepackage{multirow}
 \usepackage{hyperref}
 \usepackage{chngcntr}
-\usepackage{pdflscape}
 
 \setlist[itemize]{itemsep=0.3em, topsep=0.5em, leftmargin=2em}
 \setlist[enumerate]{itemsep=0.3em, topsep=0.5em, leftmargin=2em}
@@ -78,19 +77,37 @@
   \end{minipage}%
 }
 
-\newcommand{\ActivityDemoLargeImage}[4][0.96\linewidth]{%
-  \begin{landscape}
-  \begin{figure}[p]
+\newcommand{\ActivityDemoPair}[7]{%
+  \begin{figure}[!htbp]
     \centering
     \begingroup
-    \setlength{\fboxsep}{6pt}%
-    \fcolorbox{structurecolor!38}{white}{%
-      \includegraphics[width=#1,height=0.74\textheight,keepaspectratio]{#2}%
-    }%
+    \setlength{\fboxsep}{4pt}%
+    \begin{minipage}[t]{0.46\textwidth}
+      \centering
+      \fcolorbox{structurecolor!38}{white}{%
+        \begin{minipage}[c][0.20\textheight][c]{0.96\linewidth}
+          \centering
+          \includegraphics[width=\linewidth,height=0.19\textheight,keepaspectratio]{#1}%
+        \end{minipage}%
+      }\\[0.45em]
+      {\small\textbf{（a）#2}}\\[0.2em]
+      {\scriptsize #3}
+    \end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{0.46\textwidth}
+      \centering
+      \fcolorbox{structurecolor!38}{white}{%
+        \begin{minipage}[c][0.20\textheight][c]{0.96\linewidth}
+          \centering
+          \includegraphics[width=\linewidth,height=0.19\textheight,keepaspectratio]{#4}%
+        \end{minipage}%
+      }\\[0.45em]
+      {\small\textbf{（b）#5}}\\[0.2em]
+      {\scriptsize #6}
+    \end{minipage}
     \endgroup
-    \caption{#3：#4}
+    \caption{#7}
   \end{figure}
-  \end{landscape}
 }
 
 \newcommand{\PlanImage}[3][0.94\textwidth]{%
