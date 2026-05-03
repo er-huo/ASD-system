@@ -8,10 +8,14 @@
 \usepackage{longtable}
 \usepackage{multirow}
 \usepackage{hyperref}
+\usepackage{chngcntr}
+\usepackage{pdflscape}
 
 \setlist[itemize]{itemsep=0.3em, topsep=0.5em, leftmargin=2em}
 \setlist[enumerate]{itemsep=0.3em, topsep=0.5em, leftmargin=2em}
 \captionsetup[figure]{font=small, labelfont=bf, justification=centering, skip=6pt}
+\counterwithout{figure}{chapter}
+\renewcommand{\thefigure}{\arabic{figure}}
 
 \newcommand{\PlaceholderFigure}[2]{%
   \begin{figure}[H]
@@ -38,6 +42,55 @@
     }
     \caption{#3}
   \end{figure}
+}
+
+\newcommand{\ActivityDemoPlaceholder}[3][0.46\textwidth]{%
+  \begin{minipage}[t]{#1}
+    \centering
+    \begingroup
+    \setlength{\fboxsep}{4pt}%
+    \fcolorbox{structurecolor!38}{gray!4}{%
+      \begin{minipage}[c][0.145\textheight][c]{0.92\linewidth}
+        \centering
+        {\scriptsize\color{structurecolor!72}待补充实机图}
+      \end{minipage}%
+    }%
+    \endgroup\\[0.45em]
+    {\small\textbf{#2}}\\[0.25em]
+    {\scriptsize #3}
+  \end{minipage}%
+}
+
+\newcommand{\ActivityDemoImage}[4][0.46\textwidth]{%
+  \begin{minipage}[t]{#1}
+    \centering
+    \begingroup
+    \setlength{\fboxsep}{4pt}%
+    \fcolorbox{structurecolor!38}{white}{%
+      \begin{minipage}[c][0.145\textheight][c]{0.92\linewidth}
+        \centering
+        \includegraphics[width=\linewidth,height=0.132\textheight,keepaspectratio]{#2}
+      \end{minipage}%
+    }%
+    \endgroup\\[0.45em]
+    {\small\textbf{#3}}\\[0.25em]
+    {\scriptsize #4}
+  \end{minipage}%
+}
+
+\newcommand{\ActivityDemoLargeImage}[4][0.96\linewidth]{%
+  \begin{landscape}
+  \begin{figure}[p]
+    \centering
+    \begingroup
+    \setlength{\fboxsep}{6pt}%
+    \fcolorbox{structurecolor!38}{white}{%
+      \includegraphics[width=#1,height=0.74\textheight,keepaspectratio]{#2}%
+    }%
+    \endgroup
+    \caption{#3：#4}
+  \end{figure}
+  \end{landscape}
 }
 
 \newcommand{\PlanImage}[3][0.94\textwidth]{%
@@ -87,12 +140,12 @@
       \node[draw=PlanLine, fill=PlanLayerA, rounded corners=8pt, line width=0.8pt,
         minimum width=0.9\textwidth, text width=0.84\textwidth, align=left,
         inner xsep=12pt, inner ysep=9pt] (layer1)
-        {\textbf{感知层}\hspace{0.8em}摄像头采集儿童面部画面并形成实时情绪识别结果，语音与生理信号作为后续扩展接口保留。};
+        {\textbf{感知层}\hspace{0.8em}摄像头仅提供实时视觉表情线索，语音与生理信号作为后续扩展接口保留。};
 
       \node[draw=PlanLine, fill=PlanLayerB, rounded corners=8pt, line width=0.8pt,
         minimum width=0.9\textwidth, text width=0.84\textwidth, align=left,
         inner xsep=12pt, inner ysep=9pt, below=of layer1] (layer2)
-        {\textbf{决策层}\hspace{0.8em}后台结合 BKT 掌握度、最近作答表现、反应时长和当前情绪状态，决定提示、降难、升难或切换节奏。};
+        {\textbf{决策层}\hspace{0.8em}后台结合 BKT 掌握度、最近作答表现、反应时长和视觉辅助线索，决定提示、降难、升难或切换节奏。};
 
       \node[draw=PlanLine, fill=PlanLayerC, rounded corners=8pt, line width=0.8pt,
         minimum width=0.9\textwidth, text width=0.84\textwidth, align=left,
@@ -107,14 +160,14 @@
       \node[draw=PlanLine, fill=PlanLayerE, rounded corners=8pt, line width=0.8pt,
         minimum width=0.9\textwidth, text width=0.84\textwidth, align=left,
         inner xsep=12pt, inner ysep=9pt, below=of layer4] (layer5)
-        {\textbf{数据层}\hspace{0.8em}会话记录、情绪日志、训练总结与看板数据持续沉淀，用于家长沟通、治疗师复盘和后续迭代。};
+        {\textbf{数据层}\hspace{0.8em}会话记录、辅助线索日志、训练总结与看板数据按训练支持目的留存，用于家长沟通、治疗师复盘和后续迭代。};
 
       \draw[->, very thick, PlanLine] (layer1.south) -- (layer2.north);
       \draw[->, very thick, PlanLine] (layer2.south) -- (layer3.north);
       \draw[->, very thick, PlanLine] (layer3.south) -- (layer4.north);
       \draw[->, very thick, PlanLine] (layer4.south) -- (layer5.north);
     \end{tikzpicture}
-    \caption{图4-1 星语灵境五层系统框架}
+    \caption{星语灵境五层系统框架}
   \end{figure}
 }
 
@@ -131,10 +184,10 @@
       mechaction/.style={draw=PlanLine, fill=PlanLayerD, rounded corners=8pt,
         line width=0.8pt, minimum width=3.0cm, text width=2.62cm,
         minimum height=1.55cm, align=center, inner sep=6pt}]
-      \node[mechsource] (bkt) at (-5.6,1.9) {\textbf{BKT 掌握度}\\识别当前较弱情绪};
+      \node[mechsource] (bkt) at (-5.6,1.9) {\textbf{BKT 掌握度}\\定位当前较弱情绪类别};
       \node[mechsource] (recent) at (-1.9,1.9) {\textbf{最近作答}\\判断是否稳定完成};
       \node[mechsource] (time) at (1.9,1.9) {\textbf{反应时长}\\识别卡顿或过快作答};
-      \node[mechsource] (emotion) at (5.6,1.9) {\textbf{摄像头情绪流}\\补上当下困惑或紧张状态};
+      \node[mechsource] (emotion) at (5.6,1.9) {\textbf{视觉辅助线索}\\提示可能的困惑或紧张};
 
       \node[mechcore] (engine) at (0,0) {\textbf{规则引擎}\\综合判断是继续、提示、调难，还是切换到新的训练节奏};
 
@@ -153,7 +206,7 @@
       \draw[->, very thick, PlanLine] (engine.south east) -- (raise.north);
       \draw[->, very thick, PlanLine] (engine.south east) -- (scene.north);
     \end{tikzpicture}
-    \caption{图5-1 自适应训练机制图}
+    \caption{自适应训练机制图}
   \end{figure}
 }
 
@@ -190,7 +243,7 @@
       \draw[->, very thick, PlanLine] (hub.south east) -- (hint.north);
       \draw[->, very thick, PlanLine] (hub.south east) -- (layout.north);
     \end{tikzpicture}
-    \caption{图5-2 温和反馈联动图}
+    \caption{温和反馈联动图}
   \end{figure}
 }
 
@@ -215,7 +268,7 @@
         minimum height=1.55cm, align=center, inner sep=6pt}]
       \node[loopa] (train) at (-6.2,0) {\textbf{儿童端训练}\\作答、反应时长、提示情况};
       \node[loopb] (session) at (-3.1,0) {\textbf{会话记录}\\按题写入训练结果};
-      \node[loopc] (emotion) at (0,0) {\textbf{情绪日志与 BKT}\\持续记录状态并更新掌握度};
+      \node[loopc] (emotion) at (0,0) {\textbf{辅助线索与 BKT}\\按需记录并更新掌握度};
       \node[loopd] (report) at (3.1,0) {\textbf{总结页与看板}\\组织成家长和治疗师可读的信息};
       \node[loope] (next) at (6.2,0) {\textbf{下一轮训练重点}\\把弱项和节奏重新带回训练};
 
@@ -225,6 +278,6 @@
       \draw[->, very thick, PlanLine] (report.east) -- (next.west);
       \draw[->, very thick, PlanLine] (next.south west) .. controls (3.2,-2.2) and (-3.2,-2.2) .. (train.south east);
     \end{tikzpicture}
-    \caption{图5-3 训练数据闭环图}
+    \caption{训练数据闭环图}
   \end{figure}
 }
